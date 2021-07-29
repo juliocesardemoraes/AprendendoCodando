@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+.explainContent{
+    background: var(--color-green-light);
+    min-height: 100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.explainContainer{
+    height: 90vh;
+    width: 90vw;
+    background: blanchedalmond;
+    border-radius: 1em;
+}
+
+.masterContainer{
+    font-family: 'Poppins', sans-serif !important;
+    min-height: 100vh;
+}
+.centerText{
+    margin:0;
+    margin-bottom:1em;
+    text-align: center;
+    padding:1em;
+}
+.card{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between ;
+    width: 300px;
+    height: 420px;
+    background: #ffffff;
+    margin:1em;
+    border-radius:1em;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 2px;
+    transition: box-shadow 0.5s;
+}
+.card:hover{
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    cursor: pointer;
+}
+
+.description{
+    max-width: 250px;
+}
+.whiteText{
+    color:#ffffff;
+}
+.buttonText{
+    color: #fff;
+    background: var(--color-green-less-dark);
+    padding: 10px 20px;
+    border-radius: 2em;
+    border: 0px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 1em;
+    cursor: pointer;
+}
+.titleContainer{
+    width: 100%;
+    height: 180px;
+    background: #000;
+    color: #fff;
+    clip-path: circle(180px at center 0);
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 1px 5px 5px;
+    transition: box-shadow 0.5s;
+}
+.titleContainer:hover{
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px ;
+    cursor: pointer;
+}
+.card:nth-child(even) .titleContainer {
+    background: var(--color-green-less-dark);
+    color: var(--color-green-light);
+}
+.card:nth-child(odd) .titleContainer {
+    background: var(--color-green-dark);
+    color: #fff;
+}
+
+.containerCategories{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media screen and (min-width: 750px) {
+    .containerCategories{
+      flex-direction: row !important;
+    }
+}

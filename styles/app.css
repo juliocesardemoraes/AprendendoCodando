@@ -1,0 +1,27 @@
+:root{
+    --background-color: #061621;
+    --background-color-light: #fff0e5;
+   
+    --text-color: #fff0e5;
+    --text-color-light: #061621;
+    
+    --color-green-dark:#05386B;
+    --color-green-less-dark:#379683;
+    --color-green:#5CDB95;
+    --color-green-less-light:#8EF4AF;
+    --color-green-light:#f4f7f1;
+    
+
+    --big-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .78rem;
+
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+  }
+  
