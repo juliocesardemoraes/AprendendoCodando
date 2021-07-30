@@ -11,6 +11,8 @@ export const getStaticPaths = async () => {
     const paths = data?.data?.data?.map((unit, idx) => ({
       params: { id: unit?.category || idx },
     }));
+  } else {
+    const paths = [{}];
   }
 
   return {
