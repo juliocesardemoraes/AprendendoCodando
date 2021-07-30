@@ -12,7 +12,7 @@ export const getStaticPaths = async () => {
       params: { id: unit?.category || idx },
     }));
   } else {
-    const paths = [{}];
+    const paths = [{ id: 1 }];
   }
 
   return {

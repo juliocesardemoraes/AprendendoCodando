@@ -14,7 +14,7 @@ export const getStaticPaths = async () => {
       };
     });
   } else {
-    const paths = [{}];
+    const paths = [{ id: 1 }];
   }
 
   return {
