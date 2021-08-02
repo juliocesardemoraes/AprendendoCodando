@@ -26,6 +26,7 @@
   box-shadow: 0.5rem 0.5rem 0.75rem rgba(0,0,0,0.05), 
   0 0.75rem 1.25rem rgba(119, 59, 208, 0.2);
   transition: 1s;
+  cursor: pointer;
 }
 
 

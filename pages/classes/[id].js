@@ -7,10 +7,9 @@ import router, { useRouter } from "next/router";
 
 export const getStaticPaths = async () => {
   const data = await fetchPosts();
-  console.log("Data----->", data);
-  const paths = { id: 1 };
+  let paths = { id: 1 };
   if (data) {
-    const paths = data.data.data.map((unit) => {
+    paths = data.data.data.map((unit) => {
       return {
         params: { id: unit._id },
       };

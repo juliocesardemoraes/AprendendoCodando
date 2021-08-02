@@ -7,9 +7,9 @@ import { fetchCategories } from "../../components/GetCategories";
 
 export const getStaticPaths = async () => {
   const data = await fetchPosts();
-  const paths = { id: 1 };
+  let paths = { id: 1 };
   if (data) {
-    const paths = data?.data?.data?.map((unit, idx) => ({
+    paths = data?.data?.data?.map((unit, idx) => ({
       params: { id: unit?.category || idx },
     }));
   }
