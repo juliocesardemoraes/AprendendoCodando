@@ -4,17 +4,28 @@ import styles from "../../styles/Unit.module.css";
 import Link from "next/link";
 import SweetAlert from "react-bootstrap-sweetalert";
 import router, { useRouter } from "next/router";
+import dbConnect from "../../util/mongodb";
+import dbDisconnect from "../../util/mongodbDisconnect";
+import Class from "../../models/Class";
 
 export const getStaticPaths = async () => {
   const data = await fetchPosts();
-  let paths = { id: 1 };
-  if (data) {
-    paths = data.data.data.map((unit) => {
+  let paths = { id: "1" };
+  try {
+    dbConnect();
+    classes = await Class.find({});
+    console.log("Aqui!--->", classes);
+  } catch (err) {
+    console.log(err);
+  }
+  if (classes != null) {
+    paths = classes.map((unit) => {
       return {
-        params: { id: unit._id },
+        params: { id: `${unit._id}` },
       };
     });
   }
+  dbDisconnect();
 
   return {
     paths,
@@ -24,6 +35,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context) => {
   const data = await fetchPosts(context.params.id);
+  console.log("CONTEXT_---------->", context);
 
   return {
     props: { unit: data.data.data },

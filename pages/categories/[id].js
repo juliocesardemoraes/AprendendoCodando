@@ -4,16 +4,26 @@ import Head from "next/head";
 import Link from "next/link";
 import listStyles from "../../styles/List.module.css";
 import { fetchCategories } from "../../components/GetCategories";
+import Class from "../../models/Class";
+import dbConnect from "../../util/mongodb";
+import dbDisconnect from "../../util/mongodbDisconnect";
 
 export const getStaticPaths = async () => {
-  const data = await fetchPosts();
-  let paths = { id: 1 };
-  if (data) {
-    paths = data?.data?.data?.map((unit, idx) => ({
-      params: { id: unit?.category || idx },
+  let classes = null;
+  try {
+    dbConnect();
+    classes = await Class.find({});
+    console.log("Aqui!");
+  } catch (err) {
+    console.log(err);
+  }
+  let paths = null;
+  if (classes != null) {
+    paths = classes.map((unit, idx) => ({
+      params: { id: `${unit?.category}` || idx },
     }));
   }
-
+  dbDisconnect();
   return {
     paths,
     fallback: true,
