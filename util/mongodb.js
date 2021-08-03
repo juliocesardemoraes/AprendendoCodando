@@ -11,10 +11,13 @@ async function dbConnect() {
     return;
   }
 
-  const db = await mongoose.connect(`${MONGO_URI}`, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  });
+  const db = mongoose
+    .connect(MONGO_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    })
+    .then((res) => console.log("Connected"))
+    .catch((err) => console.log("ERROR!---> ", err));
   connection.isConnected = db.connections[0].readyState;
 }
 
