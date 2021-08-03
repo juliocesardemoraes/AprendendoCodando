@@ -11,6 +11,7 @@ import Class from "../../models/Class";
 export const getStaticPaths = async () => {
   const data = await fetchPosts();
   let paths = { id: "1" };
+  let classes = null;
   try {
     dbConnect();
     classes = await Class.find({});
