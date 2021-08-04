@@ -1,5 +1,5 @@
 import Category from "../../../models/Category";
-import dbConnect from "../../util/mongodb";
+import dbConnect from "../../../util/mongodb";
 
 dbConnect();
 
