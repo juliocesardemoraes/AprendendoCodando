@@ -16,9 +16,7 @@ async function dbConnect() {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     })
-    .then((res) => console.log("Connected"))
+    .then((res) => {})
     .catch((err) => console.log("ERROR!---> ", err));
-  connection.isConnected = db.connections[0].readyState;
 }
-
 export default dbConnect;

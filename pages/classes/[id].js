@@ -35,11 +35,27 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async (context) => {
-  const data = await fetchPosts(context.params.id);
-  console.log("CONTEXT_---------->", context);
+  //const data = await fetchPosts(context.params.id);
+  dbConnect();
+
+  let data = null;
+  try {
+    data = await Class.findById(context?.params?.id);
+  } catch (err) {
+    console.log("Error Finding Class by the id");
+  }
+  if (!data) {
+    return {
+      notFound: true,
+    };
+  }
+  dbDisconnect();
+
+  data = JSON.parse(JSON.stringify(data));
+  console.log("classesActualDATAPROPS------->", data);
 
   return {
-    props: { unit: data.data.data },
+    props: { unit: data },
   };
 };
 

@@ -81,6 +81,7 @@ Este projeto é um projeto que visa o desenvolvimento de uma plataforma de apren
 - [X] Trocar todas as Rotas "Hardcoded".
 # Task Classes
 - [X] Editar o css do container principal da Task.
+- [X] Arrumar getStaticProps de categories e classes. Para fazer as requisições no mesmo arquivo
 - [ ] Criar um Card mostrando a descrição da aula.
 <hr></hr>
 - [ ] Deploy na aplicação pelo vercel.
