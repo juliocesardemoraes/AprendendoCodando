@@ -3,11 +3,15 @@ import Link from "next/link";
 import styles from "../styles/Classes.module.css";
 import Head from "next/head";
 import NavbarHome from "../components/NavbarHome";
+import Category from "../models/Category";
 
 export const getStaticProps = async () => {
-  const data = await fetchCategories();
+  //const data = await fetchCategories();
+  let newCategoryData = await Category.find();
+  newCategoryData = JSON.parse(JSON.stringify(newCategoryData));
+
   return {
-    props: { classes: data?.data?.data },
+    props: { classes: newCategoryData },
   };
 };
 const Home = ({ classes }) => {
