@@ -17,6 +17,7 @@ export const getStaticPaths = async () => {
   } catch (err) {
     console.log("Error Classes! -----> ", err);
   }
+  console.log("Classes-------->", classes);
   let paths = null;
   if (classes != null) {
     paths = classes.map((unit, idx) => ({
@@ -31,9 +32,6 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async (context) => {
-  //const classesData = await fetchPosts(false, context?.params?.id);
-  //const categoryData = await fetchCategories(classesData?.data?.data?.category);
-
   let newClassesData = null;
   let newCategoryData = null;
   try {
