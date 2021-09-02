@@ -74,7 +74,7 @@ Este projeto é um projeto que visa o desenvolvimento de uma plataforma de apren
 - [X] Dropdown on categories. Talvez do próprio React
 - [X] Sweet Alert quando acertar a questão.
 
-## SPRINT 4(26/07-30/07)
+## SPRINT 4(23/08-27/08)
 ### V 0.5
 - [X] Sweet Alert on getting the right answer.
 - [X] Hotkey ctrl + enter para a div das classes, enviar.
@@ -82,7 +82,11 @@ Este projeto é um projeto que visa o desenvolvimento de uma plataforma de apren
 # Task Classes
 - [X] Editar o css do container principal da Task.
 - [X] Arrumar getStaticProps de categories e classes. Para fazer as requisições no mesmo arquivo
+- [X] Checar os valores das props em cada lugar onde os mesmos são "chamados".
+- [X] Tratamento de erros das respostas.
+- [ ] https://nextjs.org/docs/messages/prerender-error
 - [ ] Criar um Card mostrando a descrição da aula.
+- [ ] Add package to see features size
 <hr></hr>
 - [ ] Deploy na aplicação pelo vercel.
 - [ ] Pre tag with code imbued into it.

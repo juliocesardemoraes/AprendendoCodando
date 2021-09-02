@@ -1,9 +1,6 @@
 import mongoose from "mongoose";
 import { MONGO_URI } from "../config/enviromentVariables";
 
-console.log("MONGOURI----->", MONGO_URI);
-console.log("PROCESS>ENV--->", process.env.MONGODB_URI);
-
 const connection = {};
 
 async function dbConnect() {
@@ -16,7 +13,9 @@ async function dbConnect() {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     })
-    .then((res) => {})
+    .then((res) => {
+      console.log("Connected----->", res);
+    })
     .catch((err) => console.log("ERROR!---> ", err));
 }
 export default dbConnect;

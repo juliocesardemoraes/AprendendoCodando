@@ -7,8 +7,18 @@ body {
 }
 
 a {
-  color: inherit;
+  color: rgb(141, 28, 247);
   text-decoration: none;
+}
+p{
+  width: 30em;
+}
+pre{
+  color:beige;
+  background: black;
+  width: 30em;
+  height: 5em;
+  padding: 1em;
 }
 
 * {

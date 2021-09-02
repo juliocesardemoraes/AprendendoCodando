@@ -17,17 +17,16 @@ export const getStaticPaths = async () => {
   } catch (err) {
     console.log("Error Classes! -----> ", err);
   }
-  console.log("Classes-------->", classes);
   let paths = null;
   if (classes != null) {
-    paths = classes.map((unit, idx) => ({
+    paths = classes?.map((unit, idx) => ({
       params: { id: `${unit?.category}` || idx },
     }));
   }
   dbDisconnect();
   return {
     paths,
-    fallback: true,
+    fallback: false,
   };
 };
 
@@ -70,7 +69,7 @@ const Classes = ({ classes, category }) => {
       <h1 className={`${styles.centerText}`}>Aulas</h1>
       <p className={`${styles.centerText}`}>Escolha a aula desejada</p>
       <div className={listStyles.listContainer}>
-        {classes.map((unit) => (
+        {classes?.map((unit) => (
           <Link href={`/classes/${unit._id}`} key={unit._id} passHref={true}>
             <div className={listStyles.card}>
               <h1 className={listStyles.mr2}>{unit.title}</h1>
