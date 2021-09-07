@@ -21,7 +21,6 @@ export const getStaticPaths = async () => {
   try {
     dbConnect();
     classes = await Class.find({});
-    console.log("Aqui!--->", classes);
   } catch (err) {
     console.log(err);
   }
@@ -47,7 +46,7 @@ export const getStaticProps = async (context) => {
   try {
     data = await Class.findById(context?.params?.id);
   } catch (err) {
-    console.log("Error Finding Class by the id");
+    console.log("Error Finding a Class by the id");
   }
   if (!data) {
     return {
@@ -57,7 +56,6 @@ export const getStaticProps = async (context) => {
   dbDisconnect();
 
   data = JSON.parse(JSON.stringify(data));
-  console.log("classesActualDATAPROPS------->", data);
 
   return {
     props: { unit: data },
@@ -165,29 +163,29 @@ const Classes = ({ unit }) => {
             placeholder={unit?.placeholderCode || ""}
             onChange={(e) => setCode(e.target.value)}
           ></textarea>
-          <Link href={`/classes/${unit.classLink}`} passHref={true}>
-            <button
-              className={styles.buttonSubmit}
-              onClick={(e) =>
-                checkContent(code, unit.successCodes, e, sweetAlertModal)
-              }
-            >
-              Rodar Código{" "}
-              <SweetAlert
-                show={sweetAlertModal.show}
-                title="Parabéns você completou esta aula.Você está sendo redirecionado para a próxima aula"
-                text=""
-                type="success"
-                onConfirm={() => setSweetAlertModal({ show: false })}
-              />
-            </button>
-          </Link>
         </div>
         <div
           className={styles.codePlacement}
           dangerouslySetInnerHTML={createMarkup(code)}
         ></div>
       </div>
+      <Link href={`/classes/${unit.classLink}`} passHref={true}>
+        <button
+          className={styles.buttonSubmit}
+          onClick={(e) =>
+            checkContent(code, unit.successCodes, e, sweetAlertModal)
+          }
+        >
+          Rodar Código{" "}
+          <SweetAlert
+            show={sweetAlertModal.show}
+            title="Parabéns você completou esta aula.Você está sendo redirecionado para a próxima aula"
+            text=""
+            type="success"
+            onConfirm={() => setSweetAlertModal({ show: false })}
+          />
+        </button>
+      </Link>
     </div>
   );
 };

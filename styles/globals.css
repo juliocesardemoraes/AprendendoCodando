@@ -10,13 +10,14 @@ a {
   color: rgb(141, 28, 247);
   text-decoration: none;
 }
+
 p{
-  width: 30em;
+  text-align: justify;
 }
 pre{
   color:beige;
   background: black;
-  width: 30em;
+  width: 100%;
   height: 5em;
   padding: 1em;
 }

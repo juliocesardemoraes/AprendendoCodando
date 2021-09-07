@@ -26,17 +26,6 @@ const NavbarHome = (categorias) => {
 
   return (
     <div>
-      <nav className={styles.navContainer}>
-        <Link href="/">
-          <h1 className={`${styles.ml_2} ${styles.logo}`}>Home</h1>
-        </Link>
-        <a href="#categories">
-          <h1 className={`${styles.ml_2} ${styles.font_medium}`}>Categorias</h1>
-        </a>
-        <Link href="/">
-          <h1 className={`${styles.ml_2} ${styles.font_medium}`}>Contato</h1>
-        </Link>
-      </nav>
       <div className={styles.containerImage}>
         <div className={styles.introduction}>
           <h1 className={styles.logoName}>
@@ -44,11 +33,12 @@ const NavbarHome = (categorias) => {
             <FaBook></FaBook>
           </h1>
 
-          <p>
+          <p className={styles.paragraphIntroduction}>
             Para assistir as aulas vá na aba de busca logo abaixo. E escolha uma
             matéria
           </p>
           <Select
+            className={styles.selectContainer}
             options={opt}
             instanceId="long-value-select"
             onChange={(e, selected) => {

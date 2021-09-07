@@ -1,3 +1,7 @@
+.selectContainer{
+    color:black !important;
+}
+
 .navContainer{
     width:100%;
     height: 20%;
@@ -26,24 +30,37 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 80vh;
 }
+
 .imageResponsive{
     width: 450px;
     height:450px;
 }
-@media screen and (max-width: 500px) {
+
+@media screen and (max-width: 600px) {
+    
+    .paragraphIntroduction{
+        width: 100%;
+    }
+
+    .introduction{
+        padding:1em;
+    }
+
     .imageResponsive{
         width: 250px;
         height:250px;
     }
+
     .navContainer{
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
+
     .ml_2{
         margin-left: 0 !important;
     }
+
 }
 

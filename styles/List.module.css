@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  color:black;
 }
 
 .card{
@@ -22,6 +23,7 @@
 .mr2{
   margin-right:2em;
 }
+
 .card:hover{
   box-shadow: 0.5rem 0.5rem 0.75rem rgba(0,0,0,0.05), 
   0 0.75rem 1.25rem rgba(119, 59, 208, 0.2);

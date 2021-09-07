@@ -7,23 +7,33 @@
     align-items: center;
     justify-content: center;
 }
+
 .explainContainer{
     height: 90vh;
     width: 90vw;
-    background: blanchedalmond;
+    background: var(--background-color);
+    color: wheat;
     border-radius: 1em;
 }
 
 .masterContainer{
     font-family: 'Poppins', sans-serif !important;
+    background: var(--background-color);
+    color:wheat;
     min-height: 100vh;
 }
+
+.selectContainer{
+    color:black !important;
+}
+
 .centerText{
     margin:0;
     margin-bottom:1em;
     text-align: center;
     padding:1em;
 }
+
 .card{
     display:flex;
     flex-direction: column;
@@ -37,6 +47,7 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 2px;
     transition: box-shadow 0.5s;
 }
+
 .card:hover{
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     cursor: pointer;
@@ -45,9 +56,11 @@
 .description{
     max-width: 250px;
 }
+
 .whiteText{
     color:#ffffff;
 }
+
 .buttonText{
     color: #fff;
     background: var(--color-green-less-dark);
@@ -59,6 +72,7 @@
     margin: 1em;
     cursor: pointer;
 }
+
 .titleContainer{
     width: 100%;
     height: 180px;
@@ -69,14 +83,17 @@
     box-shadow: rgba(0, 0, 0, 0.35) 1px 5px 5px;
     transition: box-shadow 0.5s;
 }
+
 .titleContainer:hover{
     box-shadow: rgb(38, 57, 77) 0px 20px 30px ;
     cursor: pointer;
 }
+
 .card:nth-child(even) .titleContainer {
     background: var(--color-green-less-dark);
     color: var(--color-green-light);
 }
+
 .card:nth-child(odd) .titleContainer {
     background: var(--color-green-dark);
     color: #fff;
@@ -90,8 +107,27 @@
     flex-wrap: wrap;
 }
 
-@media screen and (min-width: 750px) {
+.descriptionContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.p3{
+    padding: 3em;
+}
+
+@media screen and (min-width: 650px) {
     .containerCategories{
       flex-direction: row !important;
+    }
+
+    
+    
+}
+
+@media screen and (max-width: 650px){
+    .hiddenOnSmallScreen{
+        display: none !important;
     }
 }
