@@ -55,7 +55,6 @@ export const getStaticProps = async (context) => {
 };
 
 const Classes = ({ classes, category }) => {
-  //const [classes, setClasses] = useState(null);
   return (
     <div className={styles.masterContainer}>
       <Head>
@@ -67,7 +66,9 @@ const Classes = ({ classes, category }) => {
         <h1 className={`${styles.centerText}`}>{category?.title}</h1>
         <h1 className={`${styles.centerText}`}>Aulas</h1>
         <p className={`${styles.centerText}`}>Escolha a aula desejada</p>
-        <p className={`${styles.p3}`}>{category?.description}</p>
+        <p className={`${styles.p3} ${styles.categoryDescription}`}>
+          {category?.description}
+        </p>
       </div>
       <div className={listStyles.listContainer}>
         {classes?.map((unit) => (

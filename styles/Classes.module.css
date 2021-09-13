@@ -117,13 +117,15 @@
     padding: 3em;
 }
 
+.categoryDescription{
+    padding:3em;
+    max-width: 50em;
+}
+
 @media screen and (min-width: 650px) {
     .containerCategories{
       flex-direction: row !important;
     }
-
-    
-    
 }
 
 @media screen and (max-width: 650px){

@@ -79,19 +79,28 @@ Este projeto é um projeto que visa o desenvolvimento de uma plataforma de apren
 - [X] Sweet Alert on getting the right answer.
 - [X] Hotkey ctrl + enter para a div das classes, enviar.
 - [X] Trocar todas as Rotas "Hardcoded".
-# Task Classes
 - [X] Editar o css do container principal da Task.
 - [X] Arrumar getStaticProps de categories e classes. Para fazer as requisições no mesmo arquivo
 - [X] Checar os valores das props em cada lugar onde os mesmos são "chamados".
 - [X] Tratamento de erros das respostas.
-- [ ] https://nextjs.org/docs/messages/prerender-error
-- [ ] Criar um Card mostrando a descrição da aula.
-- [ ] Add package to see features size
-<hr></hr>
-- [ ] Deploy na aplicação pelo vercel.
-- [ ] Pre tag with code imbued into it.
-- [ ] READ MORE CARDS. https://www.youtube.com/watch?v=2wQxF7gTcFo&t=76s
 
+## SPRINT 5(30/08-03/09)
+- [X] Arrumar erros para o deploy. https://nextjs.org/docs/messages/prerender-error
+
+
+## SPRINT 6(06/09-10/09)
+### V 1.0
+### Esta sprint foi responsável pelo deploy real da aplicação, logo foi considerada o ponto inicial do app. O 1.0
+- [X] Pre tag with code imbued into it.
+- [X] Deploy na aplicação pelo vercel. https://aprendendo-codando-6rbdkp79l-juliocesardemoraes.vercel.app/
+
+## SPRINT 7(06/09-10/09)
+### V 1.1
+- [X] Tornar Responsivo todas as páginas.
+- [X] Tornar Cards centralizados e responsivos.
+- [] Criar um Card mostrando a descrição da aula.
+- [] Add package to see features size
+- [ ] READ MORE CARDS. https://www.youtube.com/watch?v=2wQxF7gTcFo&t=76s
  
 # About this project
 
