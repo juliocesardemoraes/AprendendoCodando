@@ -1,5 +1,3 @@
-import { fetchCategories } from "../components/GetCategories";
-import Link from "next/link";
 import styles from "../styles/Classes.module.css";
 import Head from "next/head";
 import NavbarHome from "../components/NavbarHome";
@@ -8,7 +6,6 @@ import dbConnect from "../util/mongodb";
 
 export const getStaticProps = async () => {
   dbConnect();
-  //const data = await fetchCategories();
   let newCategoryData = await Category.find();
   newCategoryData = JSON.parse(JSON.stringify(newCategoryData));
 
@@ -17,7 +14,6 @@ export const getStaticProps = async () => {
   };
 };
 const Home = ({ classes }) => {
-  //const [classes, setClasses] = useState(null);
   return (
     <div className={styles.masterContainer}>
       <div className={styles.explainContent}>
