@@ -98,6 +98,7 @@ Este projeto é um projeto que visa o desenvolvimento de uma plataforma de apren
 ### V 1.1
 - [X] Tornar Responsivo todas as páginas.
 - [X] Tornar Cards centralizados e responsivos.
+- [ ] Criar Navbar responsável por todas as rotas do site.
 - [ ] Criar um Card mostrando a descrição da aula.
 - [ ] Add package to see features size
 - [ ] READ MORE CARDS. https://www.youtube.com/watch?v=2wQxF7gTcFo&t=76s

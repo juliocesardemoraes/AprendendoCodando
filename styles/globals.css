@@ -19,13 +19,13 @@ pre{
   font-family: Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;
   color:white;
   font-size: 1.25em;
-  background: black;
   border: 1px solid #dddbcc;
   line-height: 1.5;
   width: 100%;
   height: 5em;
   padding: 1em;
   text-align: left;
+  background: #2d2d2d;
 }
 
 * {
