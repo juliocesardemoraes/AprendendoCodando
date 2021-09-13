@@ -37,14 +37,14 @@
     height:450px;
 }
 
+.introduction{
+    padding:1em;
+}
+
 @media screen and (max-width: 600px) {
     
     .paragraphIntroduction{
         width: 100%;
-    }
-
-    .introduction{
-        padding:1em;
     }
 
     .imageResponsive{

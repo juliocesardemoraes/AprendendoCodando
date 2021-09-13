@@ -98,7 +98,13 @@ Este projeto é um projeto que visa o desenvolvimento de uma plataforma de apren
 ### V 1.1
 - [X] Tornar Responsivo todas as páginas.
 - [X] Tornar Cards centralizados e responsivos.
-- [ ] Criar Navbar responsável por todas as rotas do site.
+
+## SPRINT 8(13/09-17/09)
+### V 1.2
+- [X] Responsividade da Home não funciona para 600-700 pxs. (BUG)
+- [ ] Criar Navbar responsável por todas as rotas do site. (PBI)
+
+# WORK ITEMS NÃO DISTRIBUIDOS
 - [ ] Criar um Card mostrando a descrição da aula.
 - [ ] Add package to see features size
 - [ ] READ MORE CARDS. https://www.youtube.com/watch?v=2wQxF7gTcFo&t=76s
