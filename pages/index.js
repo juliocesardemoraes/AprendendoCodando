@@ -1,14 +1,15 @@
 import styles from "../styles/Classes.module.css";
 import Head from "next/head";
-import NavbarHome from "../components/NavbarHome";
+import HomeComponent from "../components/HomeComponent";
 import Category from "../models/Category";
 import dbConnect from "../util/mongodb";
+import dbDisconnect from "../util/mongodb";
 
 export const getStaticProps = async () => {
   dbConnect();
   let newCategoryData = await Category.find();
   newCategoryData = JSON.parse(JSON.stringify(newCategoryData));
-
+  dbDisconnect();
   return {
     props: { classes: newCategoryData },
   };
@@ -18,7 +19,7 @@ const Home = ({ classes }) => {
     <div className={styles.masterContainer}>
       <div className={styles.explainContent}>
         <div className={styles.explainContainer}>
-          <NavbarHome props={classes}></NavbarHome>
+          <HomeComponent props={classes}></HomeComponent>
         </div>
       </div>
       <div className={styles.categoriesContainer}>

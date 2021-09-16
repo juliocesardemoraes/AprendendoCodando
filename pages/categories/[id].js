@@ -1,9 +1,7 @@
-import { fetchPosts } from "../../components/GetFiles";
 import styles from "../../styles/Classes.module.css";
 import Head from "next/head";
 import Link from "next/link";
 import listStyles from "../../styles/List.module.css";
-import { fetchCategories } from "../../components/GetCategories";
 import Class from "../../models/Class";
 import Category from "../../models/Category";
 import dbConnect from "../../util/mongodb";
@@ -15,7 +13,7 @@ export const getStaticPaths = async () => {
     dbConnect();
     classes = await Class.find({});
   } catch (err) {
-    console.log("Error Classes! -----> ", err);
+    console.log("Error Have not found any Class! -----> ", err);
   }
   let paths = null;
   if (classes != null) {
@@ -33,11 +31,10 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async (context) => {
   let newClassesData = null;
   let newCategoryData = null;
+  dbConnect();
   try {
-    dbConnect();
     newClassesData = await Class.find({ category: context.params.id });
     newClassesData = JSON.parse(JSON.stringify(newClassesData));
-    dbDisconnect();
   } catch (err) {
     console.log("ERROR on fetching classes by category!!--> ", err);
   }
@@ -48,7 +45,7 @@ export const getStaticProps = async (context) => {
   } catch (err) {
     console.log("ERROR on fetching categories by category!!--> ", err);
   }
-
+  dbDisconnect();
   return {
     props: { classes: newClassesData, category: newCategoryData },
   };

@@ -1,22 +1,22 @@
-import Link from "next/link";
-import styles from "../styles/Navbar.module.css";
+import styles from "../styles/HomeComponent.module.css";
 import Image from "next/image";
 import codeMan from "../public/coding.svg";
 import { FaBook } from "react-icons/fa";
 import Select from "react-select";
 import { useRouter } from "next/router";
+import Navbar from "./Navbar.js";
 
 //Aqui está o componente Navbar que está sendo exportado para a rota principal
 //Esta Nav é o componente maior onde estão listadas as categorias
 
-const NavbarHome = (categorias) => {
+const HomeComponent = (categorias) => {
   const router = useRouter();
 
   const opt = [];
   let tempOption = {};
   {
     categorias.props.map(
-      (unit, idx) => (
+      (unit) => (
         (tempOption.value = unit._id),
         (tempOption.label = unit.title),
         opt.push(tempOption)
@@ -41,7 +41,7 @@ const NavbarHome = (categorias) => {
             className={styles.selectContainer}
             options={opt}
             instanceId="long-value-select"
-            onChange={(e, selected) => {
+            onChange={(e) => {
               router.push(`/categories/${e.value}`);
             }}
           />
@@ -57,4 +57,4 @@ const NavbarHome = (categorias) => {
     </div>
   );
 };
-export default NavbarHome;
+export default HomeComponent;

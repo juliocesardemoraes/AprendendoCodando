@@ -15,11 +15,11 @@ const MySwal = withReactContent(Swal);
 let wrongAnswers = [];
 
 export const getStaticPaths = async () => {
+  dbConnect();
   const data = await fetchPosts();
   let paths = { id: "1" };
   let classes = null;
   try {
-    dbConnect();
     classes = await Class.find({});
   } catch (err) {
     console.log(err);
