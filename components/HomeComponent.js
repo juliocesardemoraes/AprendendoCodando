@@ -12,21 +12,30 @@ import Navbar from "./Navbar.js";
 const HomeComponent = (categorias) => {
   const router = useRouter();
 
-  const opt = [];
+  let opt = [];
   let tempOption = {};
-  {
-    categorias.props.map(
-      (unit) => (
-        (tempOption.value = unit._id),
-        (tempOption.label = unit.title),
-        opt.push(tempOption)
-      )
-    );
-  }
+  categorias.props.map(
+    (unit) => (
+      (tempOption = {}),
+      console.log(unit),
+      (tempOption.value = unit._id),
+      (tempOption.label = unit.title),
+      (opt = [...opt, tempOption])
+    )
+  );
+
+  console.log(opt);
+
+  let props = [];
+  props.route = "home";
+  props.categories = categorias;
+
+  console.log(categorias);
 
   return (
     <div>
       <div className={styles.containerImage}>
+        <Navbar {...props} />
         <div className={styles.introduction}>
           <h1 className={styles.logoName}>
             Aprendendo a Codar

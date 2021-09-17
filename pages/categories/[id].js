@@ -11,16 +11,19 @@ export const getStaticPaths = async () => {
   let classes = null;
   try {
     dbConnect();
-    classes = await Class.find({});
+    classes = await Category.find({});
   } catch (err) {
     console.log("Error Have not found any Class! -----> ", err);
   }
   let paths = null;
+  console.log("Classes->", classes);
   if (classes != null) {
     paths = classes?.map((unit, idx) => ({
-      params: { id: `${unit?.category}` || idx },
+      params: { id: `${unit?._id}` || idx },
     }));
   }
+
+  console.log(paths);
   dbDisconnect();
   return {
     paths,
@@ -46,6 +49,7 @@ export const getStaticProps = async (context) => {
     console.log("ERROR on fetching categories by category!!--> ", err);
   }
   dbDisconnect();
+
   return {
     props: { classes: newClassesData, category: newCategoryData },
   };

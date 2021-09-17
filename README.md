@@ -107,6 +107,9 @@ Este projeto é um projeto que visa o desenvolvimento de uma plataforma de apren
 
 ### NAVBAR PBI
 - [X] Adicionar a navbar à Home. 
+- [X] Renderização condicional da Navbar.
+- [ ] Adicionar ícones.(HOME, INFO, CATEGORIES->AULAS);
+### FOOTER PBI
 
 # WORK ITEMS NÃO DISTRIBUIDOS
 - [ ] Adicionar checagem de codigo, autocomplete.

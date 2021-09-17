@@ -14,7 +14,7 @@ async function dbConnect() {
       useUnifiedTopology: true,
     })
     .then((res) => {
-      console.log("Connected----->", res);
+      console.log("Connected----->");
     })
     .catch((err) => console.log("ERROR!---> ", err));
 }

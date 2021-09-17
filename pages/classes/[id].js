@@ -1,5 +1,5 @@
 import { fetchPosts } from "../../components/GetFiles";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import styles from "../../styles/Unit.module.css";
 import Link from "next/link";
 import SweetAlert from "react-bootstrap-sweetalert";

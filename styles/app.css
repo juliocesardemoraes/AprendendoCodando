@@ -23,5 +23,12 @@
     --font-medium: 500;
     --font-semi-bold: 600;
 
+    --nav-bg: #242526;
+    --nav-bg-accent: #484a4d;
+    --nav-text-color: #dadce1;
+    --nav-size: 5em;
+    --nav-border: 1px solid #474a4d;
+    --nav-border-radius: 8px;
+    --nav-speed: 500ms;
   }
   
