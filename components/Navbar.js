@@ -2,45 +2,54 @@ import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import styles from "../styles/NavbarDropdownFeatures.module.css";
 import { FaHome, FaInfoCircle, FaArrowLeft } from "react-icons/fa";
-import { motion } from "framer-motion";
 
 const DropdownComponent = (props) => {
   const [onCategories, setOnCategories] = useState(false);
 
-  const variants = {
-    hidden: { opacity: 0, x: 100, y: 0 },
-    enter: { opacity: 1, x: 0, y: 0 },
-  };
+  const changeNavbarDropdown = (something, e) => {
+    console.log(e.target.classList[1]);
+    //USEEFFECT WITH setInterval
 
-  console.log(props);
+    e.target.classList.add(`${styles.animateLeft}`);
+
+    const interval = setTimeout(() => {
+      setOnCategories(something);
+      e.target.classList.remove(e.target.classList[1]);
+    }, 500);
+
+    return () => {
+      clearTimeout(interval);
+
+      //Failed to remove
+    };
+  };
 
   return (
     <div>
       {props?.props?.openDropdown === true &&
         (onCategories === false ? (
           <div className={styles.dropdown}>
-            <motion.ul
-              variants={variants}
-              initial="hidden"
-              animate={onCategories ? "hidden" : "enter"}
-              className={styles.dropdownList}
-            >
-              <a href="#" onClick={() => setOnCategories(!onCategories)}>
+            <ul className={styles.dropdownList}>
+              <a
+                href="#"
+                id="categories"
+                onClick={(e) => changeNavbarDropdown(!onCategories, e)}
+              >
                 <li className={styles.dropdownItem} data-isOn={onCategories}>
                   Categories
                 </li>
               </a>
-            </motion.ul>
+            </ul>
           </div>
         ) : (
           <div className={styles.dropdown}>
-            <motion.ul
-              variants={variants}
-              initial="hidden"
-              animate={onCategories ? "enter" : "hidden"}
-              className={styles.dropdownList}
-            >
-              <a href="#" onClick={() => setOnCategories(!onCategories)}>
+            <ul className={styles.dropdownList}>
+              <a
+                href="#"
+                id="aulas"
+                onClick={(e) => changeNavbarDropdown(!onCategories, e)}
+                className={``}
+              >
                 <li className={styles.dropdownItem}>
                   <FaArrowLeft size={28}></FaArrowLeft>
                 </li>
@@ -50,7 +59,7 @@ const DropdownComponent = (props) => {
                   <li className={styles.dropdownItem}>{e?.title}</li>
                 </a>
               ))}
-            </motion.ul>
+            </ul>
           </div>
         ))}
     </div>
