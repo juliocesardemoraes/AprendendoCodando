@@ -102,13 +102,30 @@ Este projeto é um projeto que visa o desenvolvimento de uma plataforma de apren
 ## SPRINT 8(13/09-17/09)
 ### V 1.2
 - [X] Responsividade da Home não funciona para 600-700 pxs. (BUGFIX)
-- [ ] Refatorar o código, remover arquivos não utilizados. (BUGFIX)
-- [ ] Criar Navbar responsável por todas as rotas do site. (PBI)
+
+## SPRINT 9(20/09-24/09)
+### V 1.3
+
+- [X] Refatorar o código, remover arquivos não utilizados. (BUGFIX)
+
+## SPRINT 10(27/09-01/10)
+### V 1.4
 
 ### NAVBAR PBI
 - [X] Adicionar a navbar à Home. 
 - [X] Renderização condicional da Navbar.
-- [ ] Adicionar ícones.(HOME, INFO, CATEGORIES->AULAS);
+- [X] Consertando problemas de animação.
+- [X] Adicionar ícones.(HOME, INFO, CATEGORIES->AULAS).
+
+<hr></hr>
+
+### NAVBAR PBI
+- [X] Adicionar a navbar à Home. 
+- [X] Renderização condicional da Navbar.
+- [X] Consertando problemas de animação.
+- [X] Adicionar ícones.(HOME, INFO, CATEGORIES->AULAS).
+- [ ] Adicionar rotas para as aulas, baseadas nas categorias.
+
 ### FOOTER PBI
 
 # WORK ITEMS NÃO DISTRIBUIDOS
