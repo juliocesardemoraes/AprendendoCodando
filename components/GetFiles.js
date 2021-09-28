@@ -19,7 +19,6 @@ export const fetchPosts = async (id = false, categories = false) => {
           json: true,
         });
 
-        console.log("Aqui!");
         return response;
       } else if (id) {
         let response = await axios({

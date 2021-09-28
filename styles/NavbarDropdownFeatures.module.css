@@ -55,7 +55,7 @@
     min-width: var(--nav-size) !important;
     min-height: 300px;
     top: 120px;
-    transform: translateX(-65%);
+    transform: translateX(-72%);
     background: white;
     border-radius: 1em;
     color: var(--color-green-dark);
@@ -90,16 +90,23 @@
 
 .animateLeft{
     position: relative;
-    animation-name: goingLeft;
-    animation-duration: 0.5s;
     opacity: 1;
-    right: 0px;
+    -webkit-transform: translate(2000px, 0);
+    -webkit-transition: -webkit-transform 1s linear;
+    -moz-transform: translate(2000px, 0);
+    -moz-transition: -moz-transform 1s linear;
+    -ms-transform: translate(2000px, 0);
+    -ms-transition: -ms-transform 1s linear;
 }
 
-@keyframes goingLeft {
-    0% {right:25px;}
-    25% {right:50px;}
-    50% {right:75px; opacity: 0.7;}
-    75% {right:100px; opacity: 0.6;}
-    100% {right: 200px; opacity: 0.6;}
+.animateRight{
+    position: relative;
+    opacity: 1;
+    -webkit-transform: translate(-2000px, 0);
+    -webkit-transition: -webkit-transform 1s linear;
+    -moz-transform: translate(-2000px, 0);
+    -moz-transition: -moz-transform 1s linear;
+    -ms-transform: translate(-2000px, 0);
+    -ms-transition: -ms-transform 1s linear;
 }
+

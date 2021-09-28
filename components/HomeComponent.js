@@ -17,20 +17,15 @@ const HomeComponent = (categorias) => {
   categorias.props.map(
     (unit) => (
       (tempOption = {}),
-      console.log(unit),
       (tempOption.value = unit._id),
       (tempOption.label = unit.title),
       (opt = [...opt, tempOption])
     )
   );
 
-  console.log(opt);
-
   let props = [];
   props.route = "home";
   props.categories = categorias;
-
-  console.log(categorias);
 
   return (
     <div>

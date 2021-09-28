@@ -1,26 +1,30 @@
-import { useRouter } from "next/router";
+import router, { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import styles from "../styles/NavbarDropdownFeatures.module.css";
-import { FaHome, FaInfoCircle, FaArrowLeft } from "react-icons/fa";
+import {
+  FaHome,
+  FaInfoCircle,
+  FaArrowLeft,
+  FaBookReader,
+} from "react-icons/fa";
 
 const DropdownComponent = (props) => {
+  console.log(props);
+  const router = useRouter();
+
   const [onCategories, setOnCategories] = useState(false);
 
-  const changeNavbarDropdown = (something, e) => {
-    console.log(e.target.classList[1]);
-    //USEEFFECT WITH setInterval
-
-    e.target.classList.add(`${styles.animateLeft}`);
+  const changeNavbarDropdown = (onOrOff, e, direction) => {
+    if (direction === "left") e.target.classList.add(`${styles.animateLeft}`);
+    if (direction === "right") e.target.classList.add(`${styles.animateRight}`);
 
     const interval = setTimeout(() => {
-      setOnCategories(something);
+      setOnCategories(onOrOff);
       e.target.classList.remove(e.target.classList[1]);
     }, 500);
 
     return () => {
       clearTimeout(interval);
-
-      //Failed to remove
     };
   };
 
@@ -33,11 +37,9 @@ const DropdownComponent = (props) => {
               <a
                 href="#"
                 id="categories"
-                onClick={(e) => changeNavbarDropdown(!onCategories, e)}
+                onClick={(e) => changeNavbarDropdown(!onCategories, e, "left")}
               >
-                <li className={styles.dropdownItem} data-isOn={onCategories}>
-                  Categories
-                </li>
+                <li className={styles.dropdownItem}>Categories</li>
               </a>
             </ul>
           </div>
@@ -47,7 +49,7 @@ const DropdownComponent = (props) => {
               <a
                 href="#"
                 id="aulas"
-                onClick={(e) => changeNavbarDropdown(!onCategories, e)}
+                onClick={(e) => changeNavbarDropdown(!onCategories, e, "right")}
                 className={``}
               >
                 <li className={styles.dropdownItem}>
@@ -55,7 +57,15 @@ const DropdownComponent = (props) => {
                 </li>
               </a>
               {props?.props?.categories?.props?.map((e, idx) => (
-                <a href="#" key={idx}>
+                <a
+                  href="#"
+                  key={idx}
+                  onClick={() =>
+                    router.push(`/categories/${e?._id}`, undefined, {
+                      shallow: true,
+                    })
+                  }
+                >
                   <li className={styles.dropdownItem}>{e?.title}</li>
                 </a>
               ))}
@@ -67,12 +77,9 @@ const DropdownComponent = (props) => {
 };
 
 const NavbarComponent = (props) => {
-  const router = useRouter();
-
   const [open, setOpen] = useState(false);
 
   //props.openDropdown = open;
-  console.log(props);
 
   let newProps = { ...props, openDropdown: open };
 
@@ -90,7 +97,7 @@ const NavbarComponent = (props) => {
             className={styles.navbarLink}
             onClick={() => setOpen(!open)}
           >
-            Cliq
+            <FaBookReader size={28}></FaBookReader>
           </a>
         </li>
         <DropdownComponent props={newProps}></DropdownComponent>

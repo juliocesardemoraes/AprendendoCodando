@@ -131,26 +131,7 @@ const Classes = ({ unit }) => {
   const [code, setCode] = useState(unit.placeholderCode);
   const [sweetAlertModal, setSweetAlertModal] = useState({ show: false });
   return (
-    <div
-      className={styles.masterContainer}
-      /*
-      onKeyDown={(e) => {
-        switch (e.key) {
-          case "Enter":
-            checkEnter(
-              e,
-              code,
-              unit.successCodes,
-              sweetAlertModal,
-              unit.classLink
-            );
-            break;
-          default:
-            console.log("Nadie");
-        }
-      }}
-      */
-    >
+    <div className={styles.masterContainer}>
       <h1 className={styles.centerText}>{unit.title}</h1>
       <div
         className={styles.descriptionCode}

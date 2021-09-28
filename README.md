@@ -116,6 +116,7 @@ Este projeto é um projeto que visa o desenvolvimento de uma plataforma de apren
 - [X] Renderização condicional da Navbar.
 - [X] Consertando problemas de animação.
 - [X] Adicionar ícones.(HOME, INFO, CATEGORIES->AULAS).
+- [X] Animação fluida. 
 
 <hr></hr>
 
@@ -124,7 +125,8 @@ Este projeto é um projeto que visa o desenvolvimento de uma plataforma de apren
 - [X] Renderização condicional da Navbar.
 - [X] Consertando problemas de animação.
 - [X] Adicionar ícones.(HOME, INFO, CATEGORIES->AULAS).
-- [ ] Adicionar rotas para as aulas, baseadas nas categorias.
+- [X] Animação fluida. 
+<strike>[X] Adicionar rotas para as aulas, baseadas nas categorias.</strike>
 
 ### FOOTER PBI
 
