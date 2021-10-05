@@ -117,16 +117,20 @@ Este projeto é um projeto que visa o desenvolvimento de uma plataforma de apren
 - [X] Consertando problemas de animação.
 - [X] Adicionar ícones.(HOME, INFO, CATEGORIES->AULAS).
 - [X] Animação fluida. 
+<strike>[X] Adicionar rotas para as aulas, baseadas nas categorias.</strike>
+
+
+## SPRINT 11(04/10-08/10)
+
+- [X] Arrumar navbar home.
+- [X] Arrumar navbar quando estiver nas categorias.
+- [ ] Usar componente navbar nas aulas.
+
+
+
+
 
 <hr></hr>
-
-### NAVBAR PBI
-- [X] Adicionar a navbar à Home. 
-- [X] Renderização condicional da Navbar.
-- [X] Consertando problemas de animação.
-- [X] Adicionar ícones.(HOME, INFO, CATEGORIES->AULAS).
-- [X] Animação fluida. 
-<strike>[X] Adicionar rotas para as aulas, baseadas nas categorias.</strike>
 
 ### FOOTER PBI
 

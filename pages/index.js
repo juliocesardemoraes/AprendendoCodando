@@ -7,9 +7,17 @@ import dbDisconnect from "../util/mongodb";
 
 export const getStaticProps = async () => {
   dbConnect();
-  let newCategoryData = await Category.find();
-  newCategoryData = JSON.parse(JSON.stringify(newCategoryData));
+  let newCategoryData = null;
+
+  try {
+    newCategoryData = await Category.find();
+    newCategoryData = JSON.parse(JSON.stringify(newCategoryData));
+  } catch (err) {
+    console.log("ERROR on fetching all categories!!--> ", err);
+  }
+
   dbDisconnect();
+
   return {
     props: { classes: newCategoryData },
   };

@@ -56,19 +56,29 @@ const DropdownComponent = (props) => {
                   <FaArrowLeft size={28}></FaArrowLeft>
                 </li>
               </a>
-              {props?.props?.categories?.props?.map((e, idx) => (
-                <a
-                  href="#"
-                  key={idx}
-                  onClick={() =>
-                    router.push(`/categories/${e?._id}`, undefined, {
-                      shallow: true,
-                    })
-                  }
-                >
-                  <li className={styles.dropdownItem}>{e?.title}</li>
-                </a>
-              ))}
+              {props?.props?.categories?.props === undefined
+                ? props?.props?.categories.map((e, idx) => (
+                    <a
+                      href="#"
+                      key={idx}
+                      onClick={() => router.push(`/categories/${e?._id}`)}
+                    >
+                      <li className={styles.dropdownItem}>{e?.title}</li>
+                    </a>
+                  ))
+                : props?.props?.categories?.props?.map((e, idx) => (
+                    <a
+                      href="#"
+                      key={idx}
+                      onClick={() =>
+                        router.push(`/categories/${e?._id}`, undefined, {
+                          shallow: true,
+                        })
+                      }
+                    >
+                      <li className={styles.dropdownItem}>{e?.title}</li>
+                    </a>
+                  ))}
             </ul>
           </div>
         ))}
@@ -87,7 +97,11 @@ const NavbarComponent = (props) => {
     <nav className={styles.navbar}>
       <ul className={styles.navbarNav}>
         <li className={styles.navbarItem}>
-          <a href="#" className={styles.navbarLink}>
+          <a
+            href="#"
+            onClick={() => router.push("/")}
+            className={styles.navbarLink}
+          >
             <FaHome size={28}></FaHome>
           </a>
         </li>
