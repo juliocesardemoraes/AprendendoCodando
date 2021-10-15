@@ -8,12 +8,11 @@ import dbConnect from "../../util/mongodb";
 import dbDisconnect from "../../util/mongodbDisconnect";
 import Class from "../../models/Class";
 import Swal from "sweetalert2";
-import withReactContent from "sweetalert2-react-content";
-
-const MySwal = withReactContent(Swal);
+import Navbar from "../../components/Navbar";
 
 let wrongAnswers = [];
 
+// Pegando as rotas necessárias para o componente
 export const getStaticPaths = async () => {
   dbConnect();
   const data = await fetchPosts();
@@ -39,6 +38,7 @@ export const getStaticPaths = async () => {
   };
 };
 
+// Enviando as props ao componente buscando as classes no banco
 export const getStaticProps = async (context) => {
   dbConnect();
 
@@ -62,6 +62,10 @@ export const getStaticProps = async (context) => {
   };
 };
 
+// Injetando o html de forma que o conteúdo não mude quando renderizado
+// isso torna o site vulnerável a ataques XSS porém é útil para o
+// propósito do site.
+// https://zhenyong.github.io/react/tips/dangerously-set-inner-html.html
 function createMarkup(obj) {
   return { __html: obj };
 }
@@ -74,6 +78,9 @@ const checkEnter = (e, value, checkValue, sweetAlertModal, classLink) => {
 };
 */
 
+//Nesta função o texto que necessita ser complementado passa por um regex
+//e retorna para o usuário. O regex é necessário pois são caracteres
+//especiais
 function escapeHtml(text) {
   text = text.toString();
   let map = {
@@ -89,6 +96,7 @@ function escapeHtml(text) {
   });
 }
 
+// Função para checar se as respostas estão corretas
 const checkContent = (
   value,
   checkValue,
@@ -107,13 +115,11 @@ const checkContent = (
       invalidOption = true;
     }
   }
-  for (let i = 0; i < checkValue?.length; i++) {
-    if (invalidOption == false) {
-      sweetAlertModal.show = true;
+  if (invalidOption === false) {
+    sweetAlertModal.show = true;
 
-      if (classLink) {
-        router.push(`${classLink}`);
-      }
+    if (classLink) {
+      router.push(`${classLink}`);
     }
   }
 
@@ -127,11 +133,13 @@ const checkContent = (
 
 const Classes = ({ unit }) => {
   const router = useRouter();
+  const simple = [{ simple: true }];
 
   const [code, setCode] = useState(unit.placeholderCode);
   const [sweetAlertModal, setSweetAlertModal] = useState({ show: false });
   return (
     <div className={styles.masterContainer}>
+      <Navbar {...simple}></Navbar>
       <h1 className={styles.centerText}>{unit.title}</h1>
       <div
         className={styles.descriptionCode}

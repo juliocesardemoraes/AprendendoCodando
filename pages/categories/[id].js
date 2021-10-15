@@ -7,7 +7,6 @@ import Category from "../../models/Category";
 import dbConnect from "../../util/mongodb";
 import dbDisconnect from "../../util/mongodbDisconnect";
 import Navbar from "../../components/Navbar";
-import HomeComponent from "../../components/HomeComponent";
 
 export const getStaticPaths = async () => {
   let classes = null;

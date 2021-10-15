@@ -22,6 +22,7 @@ export const getStaticProps = async () => {
     props: { classes: newCategoryData },
   };
 };
+
 const Home = ({ classes }) => {
   return (
     <div className={styles.masterContainer}>

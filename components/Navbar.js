@@ -87,42 +87,66 @@ const DropdownComponent = (props) => {
 };
 
 const NavbarComponent = (props) => {
+  console.log(props[0]?.simple);
   const [open, setOpen] = useState(false);
 
   //props.openDropdown = open;
 
   let newProps = { ...props, openDropdown: open };
 
-  return (
-    <nav className={styles.navbar}>
-      <ul className={styles.navbarNav}>
-        <li className={styles.navbarItem}>
-          <a
-            href="#"
-            onClick={() => router.push("/")}
-            className={styles.navbarLink}
-          >
-            <FaHome size={28}></FaHome>
-          </a>
-        </li>
-        <li className={styles.navbarItem}>
-          <a
-            href="#"
-            className={styles.navbarLink}
-            onClick={() => setOpen(!open)}
-          >
-            <FaBookReader size={28}></FaBookReader>
-          </a>
-        </li>
-        <DropdownComponent props={newProps}></DropdownComponent>
-        <li className={styles.navbarItem}>
-          <a href="#" className={styles.navbarLink}>
-            <FaInfoCircle size={28}></FaInfoCircle>
-          </a>
-        </li>
-      </ul>
-    </nav>
-  );
+  if (props[0]?.simple === true) {
+    return (
+      <nav className={styles.navbar}>
+        <ul className={styles.navbarNav}>
+          <li className={styles.navbarItem}>
+            <a
+              href="#"
+              onClick={() => router.push("/")}
+              className={styles.navbarLink}
+            >
+              <FaHome size={28}></FaHome>
+            </a>
+          </li>
+          <li className={styles.navbarItem}>
+            <a href="#" className={styles.navbarLink}>
+              <FaInfoCircle size={28}></FaInfoCircle>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    );
+  } else {
+    return (
+      <nav className={styles.navbar}>
+        <ul className={styles.navbarNav}>
+          <li className={styles.navbarItem}>
+            <a
+              href="#"
+              onClick={() => router.push("/")}
+              className={styles.navbarLink}
+            >
+              <FaHome size={28}></FaHome>
+            </a>
+          </li>
+          <li className={styles.navbarItem}>
+            <a
+              href="#"
+              className={styles.navbarLink}
+              onClick={() => setOpen(!open)}
+            >
+              <FaBookReader size={28}></FaBookReader>
+            </a>
+          </li>
+          <DropdownComponent props={newProps}></DropdownComponent>
+          <li className={styles.navbarItem}>
+            <a href="#" className={styles.navbarLink}>
+              <FaInfoCircle size={28}></FaInfoCircle>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    );
+  }
 };
 
 export default NavbarComponent;

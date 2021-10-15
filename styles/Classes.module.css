@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 .explainContent{
-    background: var(--color-green-light);
+    background: rgba(165, 55, 253,0.4);
     min-height: 100vh;
     display:flex;
     align-items: center;
@@ -9,7 +9,7 @@
 }
 
 .explainContainer{
-    height: 90vh;
+    min-height: 80vh;
     width: 90vw;
     background: var(--background-color);
     color: wheat;
