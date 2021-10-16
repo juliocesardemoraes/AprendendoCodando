@@ -128,13 +128,15 @@ Este projeto é um projeto que visa o desenvolvimento de uma plataforma de apren
 ## SPRINT 12(11/10-15/10)
 - [X] Estilizar main page.
 - [X] Usar componente navbar nas aulas.
+- [X] Otimização de código. Comentários no código. Removendo imports desnecessários.
+    - [X] Rota de classes.
+
+## SPRINT 13(18/10-22/10)
 - [ ] Categories na navbar das aulas?
 - [ ] Otimização de código. Comentários no código. Removendo imports desnecessários.
-    - [X] Rota de classes.
     - [ ] Rota Principal.
     - [ ] Rota de categorias.
 - [ ] Fora de foco remove menu dropdown.
-
 <hr></hr>
 
 ### FOOTER PBI
@@ -145,6 +147,7 @@ Este projeto é um projeto que visa o desenvolvimento de uma plataforma de apren
 - [ ] Add package to see features size
 - [ ] READ MORE CARDS. https://www.youtube.com/watch?v=2wQxF7gTcFo&t=76s
 - [ ] Estilizar.
+- [ ] PWA?
  
 # About this project
 
