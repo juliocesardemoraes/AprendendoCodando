@@ -57,31 +57,27 @@
 
 .linkedin{
     color:var(--color-green-dark);
+    transition: all .6s ease;
+    -webkit-transition: all .6s ease;
 }
 
 .youtube{
     color:rgb(235, 75, 75);
+    transition: all .6s ease;
+    -webkit-transition: all .6s ease;
 }
 
 .github{
     color:white;
+    transition: all .6s ease;
+    -webkit-transition: all .6s ease;
 }
 
 .linkedin:hover, .youtube:hover, .github:hover{
     filter:brightness(1.5);
-    
+    box-shadow: 0 30px 45px -15px rgba(0,111,255,0.6);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
 }
-/*
-.glow_effect :hover{
-    box-shadow:
-    inset 0 0 40px whitesmoke,
-    inset 20px 0 40px #f0f,
-    inset -20px 0 40px #0ff,
-    inset 20px 0 150px #f0f,
-    inset -20px 0 150px #0ff,
-    0 0 25px #fff,
-    -10px 0 40px #f0f,
-    10px 0 40px #0ff;
-    border-radius: 0.1em;
-}
-*/
