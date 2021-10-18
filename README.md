@@ -132,6 +132,7 @@ Este projeto é um projeto que visa o desenvolvimento de uma plataforma de apren
     - [X] Rota de classes.
 
 ## SPRINT 13(18/10-22/10)
+- [ ] Footer
 - [ ] Categories na navbar das aulas?
 - [ ] Otimização de código. Comentários no código. Removendo imports desnecessários.
     - [ ] Rota Principal.

@@ -9,7 +9,6 @@ import {
 } from "react-icons/fa";
 
 const DropdownComponent = (props) => {
-  console.log(props);
   const router = useRouter();
 
   const [onCategories, setOnCategories] = useState(false);

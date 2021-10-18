@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+.footer{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    background: -webkit-linear-gradient(rgba(29, 38, 113, 0.3), rgba(195, 55, 100, 0.3)), url("../public/Background.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    filter: brightness(1.25);
+}
+
+.card{
+    font-size: 1em;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    padding: 1em;
+}
+
+.card_profession{
+    font-family: 'Titillium Web', sans-serif !important;
+}
+
+.list{
+    list-style: none;
+    width: 100% !important;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+.glassmorphism{
+    background: rgba( 0, 0, 0, 0.75 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 2px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.imageResponsive{
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    opacity: 0.9;
+    filter: grayscale(100%) brightness(55%) sepia(80%) hue-rotate(-70deg) saturate(500%) contrast(0.9);
+}
+
+.linkedin{
+    color:var(--color-green-dark);
+}
+
+.youtube{
+    color:rgb(235, 75, 75);
+}
+
+.github{
+    color:white;
+}
+
+.linkedin:hover, .youtube:hover, .github:hover{
+    filter:brightness(1.5);
+    
+}
+/*
+.glow_effect :hover{
+    box-shadow:
+    inset 0 0 40px whitesmoke,
+    inset 20px 0 40px #f0f,
+    inset -20px 0 40px #0ff,
+    inset 20px 0 150px #f0f,
+    inset -20px 0 150px #0ff,
+    0 0 25px #fff,
+    -10px 0 40px #f0f,
+    10px 0 40px #0ff;
+    border-radius: 0.1em;
+}
+*/

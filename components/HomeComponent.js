@@ -36,7 +36,6 @@ const HomeComponent = (categorias) => {
             Aprendendo a Codar
             <FaBook></FaBook>
           </h1>
-
           <p className={styles.paragraphIntroduction}>
             Para assistir as aulas vá na aba de busca logo abaixo. E escolha uma
             matéria

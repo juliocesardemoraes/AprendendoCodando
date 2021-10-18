@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 .explainContent{
-    background: rgba(165, 55, 253,0.4);
+    background: #ad5389;
+    background: -webkit-linear-gradient(to right, #ad5389, #3c1053);
+    background: linear-gradient(to right, #ad5389, #3c1053);
     min-height: 100vh;
     display:flex;
     align-items: center;

@@ -1,4 +1,3 @@
-import { fetchPosts } from "../../components/GetFiles";
 import { useState } from "react";
 import styles from "../../styles/Unit.module.css";
 import Link from "next/link";
@@ -15,7 +14,6 @@ let wrongAnswers = [];
 // Pegando as rotas necessárias para o componente
 export const getStaticPaths = async () => {
   dbConnect();
-  const data = await fetchPosts();
   let paths = { id: "1" };
   let classes = null;
   try {
@@ -120,7 +118,7 @@ const checkContent = (
 
     if (classLink) {
       router.push(`${classLink}`);
-    }
+    } //else
   }
 
   if (wrongAnswers.length > 0) {
