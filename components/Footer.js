@@ -8,7 +8,7 @@ import styles from "../styles/Footer.module.css";
 
 const NavbarComponent = () => {
   return (
-    <footer className={styles.footer}>
+    <footer id="Footer" className={styles.footer}>
       <div className={`${styles.card} ${styles.glassmorphism}`}>
         <Image
           alt="Website Author Photo"

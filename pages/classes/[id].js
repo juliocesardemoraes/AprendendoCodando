@@ -1,4 +1,5 @@
-import { useState } from "react";
+//Inicializando váriaveis e importando bibliotecas, hooks, etc.
+import { useState, useEffect } from "react";
 import styles from "../../styles/Unit.module.css";
 import Link from "next/link";
 import SweetAlert from "react-bootstrap-sweetalert";
@@ -103,19 +104,21 @@ const checkContent = (
   classLink = null
 ) => {
   value = value.toLowerCase();
-  let invalidOption = false;
+  let validAnswer = true;
   wrongAnswers = [];
+
   for (let i = 0; i < checkValue?.length; i++) {
     checkValue[i] = checkValue[i].toLowerCase();
     if (!value.includes(checkValue[i])) {
       wrongAnswers.push(checkValue[i]);
       event?.preventDefault();
-      invalidOption = true;
+      validAnswer = false;
     }
   }
-  if (invalidOption === false) {
-    sweetAlertModal.show = true;
 
+  // Se a resposta for certa entrar no if
+  if (validAnswer) {
+    sweetAlertModal.show = true;
     if (classLink) {
       router.push(`${classLink}`);
     } //else
@@ -147,7 +150,7 @@ const Classes = ({ unit }) => {
         <div className={styles.textareaContainer}>
           <textarea
             className={styles.textarea}
-            placeholder={unit?.placeholderCode || ""}
+            value={code || ""}
             onChange={(e) => setCode(e.target.value)}
           ></textarea>
         </div>

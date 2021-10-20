@@ -1,3 +1,4 @@
+import Link from "next/link";
 import router, { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 import styles from "../styles/NavbarDropdownFeatures.module.css";
@@ -107,7 +108,7 @@ const NavbarComponent = (props) => {
             </a>
           </li>
           <li className={styles.navbarItem}>
-            <a href="#" className={styles.navbarLink}>
+            <a href="#Footer" className={styles.navbarLink}>
               <FaInfoCircle size={28}></FaInfoCircle>
             </a>
           </li>
@@ -138,7 +139,7 @@ const NavbarComponent = (props) => {
           </li>
           <DropdownComponent props={newProps}></DropdownComponent>
           <li className={styles.navbarItem}>
-            <a href="#" className={styles.navbarLink}>
+            <a href="#Footer" className={styles.navbarLink}>
               <FaInfoCircle size={28}></FaInfoCircle>
             </a>
           </li>

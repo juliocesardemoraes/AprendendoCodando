@@ -132,12 +132,18 @@ Este projeto é um projeto que visa o desenvolvimento de uma plataforma de apren
     - [X] Rota de classes.
 
 ## SPRINT 13(18/10-22/10)
-- [ ] Footer
-- [ ] Categories na navbar das aulas?
+- [X] Footer
+- [X] Responsividade no footer.
+- [X] Placeholder code as normal code when rendering page.
+- [X] Informação da navbar descer para o footer.
+- [ ] LocalStorage.
+- [ ] Arrumar as cores na home. Glassmorphism no menu? gradient
+- [ ] Categories  na navbar das aulas?
 - [ ] Otimização de código. Comentários no código. Removendo imports desnecessários.
     - [ ] Rota Principal.
     - [ ] Rota de categorias.
 - [ ] Fora de foco remove menu dropdown.
+- [ ] Mostrar checklist nas aulas e marcar com useEffect.
 <hr></hr>
 
 ### FOOTER PBI
