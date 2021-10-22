@@ -1,3 +1,4 @@
+// Importando bibliotecas e estilizações do css.
 import styles from "../../styles/Classes.module.css";
 import Head from "next/head";
 import Link from "next/link";
@@ -7,7 +8,9 @@ import Category from "../../models/Category";
 import dbConnect from "../../util/mongodb";
 import dbDisconnect from "../../util/mongodbDisconnect";
 import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
 
+// Populando os caminhos para o nextjs. https://nextjs.org/docs/basic-features/data-fetching
 export const getStaticPaths = async () => {
   let classes = null;
   try {
@@ -29,10 +32,12 @@ export const getStaticPaths = async () => {
   };
 };
 
+//Pegando os props no banco de dados mongodb. https://nextjs.org/docs/basic-features/data-fetching
 export const getStaticProps = async (context) => {
   let newClassesData = null;
   let newCategoryData = null;
   let allCategories = null;
+  // Estabelecendo conexão com o banco de dados
   dbConnect();
   try {
     newClassesData = await Class.find({ category: context.params.id });
@@ -54,9 +59,11 @@ export const getStaticProps = async (context) => {
   } catch (err) {
     console.log("ERROR on fetching all categories!!--> ", err);
   }
-
+  // Finalizando conexão com o banco de dados
   dbDisconnect();
 
+  // Retornando dados que foram recolhidos do banco de dados e re-
+  // passando para o componente principal
   return {
     props: {
       classes: newClassesData,
@@ -66,7 +73,9 @@ export const getStaticProps = async (context) => {
   };
 };
 
+//Componente principal da página de categorias
 const Classes = ({ classes, category, allCat }) => {
+  // Criando a array que irá popular a navbar
   let props = [];
   props.route = "home";
   props.categories = allCat;
@@ -97,6 +106,7 @@ const Classes = ({ classes, category, allCat }) => {
           </Link>
         ))}
       </div>
+      <Footer></Footer>
     </div>
   );
 };

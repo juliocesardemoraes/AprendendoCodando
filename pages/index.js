@@ -1,3 +1,4 @@
+// Importando bibliotecas e estilizações do css.
 import styles from "../styles/Classes.module.css";
 import Head from "next/head";
 import HomeComponent from "../components/HomeComponent";
@@ -6,7 +7,9 @@ import Category from "../models/Category";
 import dbConnect from "../util/mongodb";
 import dbDisconnect from "../util/mongodb";
 
+// Populando os caminhos para o nextjs. https://nextjs.org/docs/basic-features/data-fetching
 export const getStaticProps = async () => {
+  // Estabelecendo conexão com o banco de dados
   dbConnect();
   let newCategoryData = null;
 
@@ -17,13 +20,17 @@ export const getStaticProps = async () => {
     console.log("ERROR on fetching all categories!!--> ", err);
   }
 
+  // Finalizando conexão com o banco de dados
   dbDisconnect();
 
+  // Retornando dados que foram recolhidos do banco de dados e re-
+  // passando para o componente principal
   return {
     props: { classes: newCategoryData },
   };
 };
 
+//Componente principal da homepage
 const Home = ({ classes }) => {
   return (
     <div className={styles.masterContainer}>

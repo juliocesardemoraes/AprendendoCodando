@@ -38,6 +38,7 @@ Este projeto é um projeto que visa o desenvolvimento de uma plataforma de apren
 
 ### V 0
 - [x] Criando a Tela inicial. 
+
 <strike>[ ] React Project. MockUp. Descartado por enquanto</strike>
 
 ### V 0.1 
@@ -47,6 +48,7 @@ Este projeto é um projeto que visa o desenvolvimento de uma plataforma de apren
 
 ### V 0.2
 <strike>Usar useeffect para renderizar código digitado pelo usuário. Jogado para a 0.3</strike>
+
 - [X] Configurar API para servir o frontend.
 
 ## SPRINT 2(12/07-16/07)
@@ -92,24 +94,20 @@ Este projeto é um projeto que visa o desenvolvimento de uma plataforma de apren
 ### V 1.0
 ### Esta sprint foi responsável pelo deploy real da aplicação, logo foi considerada o ponto inicial do app. O 1.0
 - [X] Pre tag with code imbued into it.
-- [X] Deploy na aplicação pelo vercel. https://aprendendo-codando-6rbdkp79l-juliocesardemoraes.vercel.app/
+- [X] Deploy na aplicação pelo vercel. https://aprendendo-codando.vercel.app/
 
 ## SPRINT 7(06/09-10/09)
-### V 1.1
 - [X] Tornar Responsivo todas as páginas.
 - [X] Tornar Cards centralizados e responsivos.
 
 ## SPRINT 8(13/09-17/09)
-### V 1.2
 - [X] Responsividade da Home não funciona para 600-700 pxs. (BUGFIX)
 
 ## SPRINT 9(20/09-24/09)
-### V 1.3
 
 - [X] Refatorar o código, remover arquivos não utilizados. (BUGFIX)
 
 ## SPRINT 10(27/09-01/10)
-### V 1.4
 
 ### NAVBAR PBI
 - [X] Adicionar a navbar à Home. 
@@ -136,14 +134,18 @@ Este projeto é um projeto que visa o desenvolvimento de uma plataforma de apren
 - [X] Responsividade no footer.
 - [X] Placeholder code as normal code when rendering page.
 - [X] Informação da navbar descer para o footer.
+- [X] Footer all pages. Semi
+- [X] Otimização de código. Comentários no código. Removendo imports desnecessários.
+    - [X] Rota Principal.
+    - [X] Rota de categorias.
 - [ ] LocalStorage.
 - [ ] Arrumar as cores na home. Glassmorphism no menu? gradient
 - [ ] Categories  na navbar das aulas?
-- [ ] Otimização de código. Comentários no código. Removendo imports desnecessários.
-    - [ ] Rota Principal.
-    - [ ] Rota de categorias.
 - [ ] Fora de foco remove menu dropdown.
 - [ ] Mostrar checklist nas aulas e marcar com useEffect.
+
+## SPRINT 14(25/10-29/10)
+- [] 
 <hr></hr>
 
 ### FOOTER PBI
@@ -155,6 +157,7 @@ Este projeto é um projeto que visa o desenvolvimento de uma plataforma de apren
 - [ ] READ MORE CARDS. https://www.youtube.com/watch?v=2wQxF7gTcFo&t=76s
 - [ ] Estilizar.
 - [ ] PWA?
+- [ ] Testes com cypress + nextjs
  
 # About this project
 
