@@ -1,4 +1,5 @@
 // Importando bibliotecas e estilizações do css.
+import { useEffect, useState } from "react";
 import styles from "../../styles/Classes.module.css";
 import Head from "next/head";
 import Link from "next/link";
@@ -9,6 +10,7 @@ import dbConnect from "../../util/mongodb";
 import dbDisconnect from "../../util/mongodbDisconnect";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import Cookies from "js-cookie";
 
 // Populando os caminhos para o nextjs. https://nextjs.org/docs/basic-features/data-fetching
 export const getStaticPaths = async () => {
@@ -37,6 +39,7 @@ export const getStaticProps = async (context) => {
   let newClassesData = null;
   let newCategoryData = null;
   let allCategories = null;
+
   // Estabelecendo conexão com o banco de dados
   dbConnect();
   try {
@@ -75,7 +78,11 @@ export const getStaticProps = async (context) => {
 
 //Componente principal da página de categorias
 const Classes = ({ classes, category, allCat }) => {
+  const [cookie, setCookie] = useState(Cookies.get("classes"));
   // Criando a array que irá popular a navbar
+  useEffect(() => {
+    setCookie(Cookies.get("classes"));
+  }, []);
   let props = [];
   props.route = "home";
   props.categories = allCat;
@@ -97,6 +104,11 @@ const Classes = ({ classes, category, allCat }) => {
         </p>
       </div>
       <div className={listStyles.listContainer}>
+        <Link href={`/classes/${cookie || classes[0]?._id}`} passHref={true}>
+          <div className={listStyles.card}>
+            <h1 className={listStyles.mr2}>Vá para a sua aula atual.</h1>
+          </div>
+        </Link>
         {classes?.map((unit) => (
           <Link href={`/classes/${unit._id}`} key={unit._id} passHref={true}>
             <div className={listStyles.card}>

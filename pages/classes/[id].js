@@ -1,5 +1,5 @@
 //Inicializando váriaveis e importando bibliotecas, hooks, etc.
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import styles from "../../styles/Unit.module.css";
 import Link from "next/link";
 import SweetAlert from "react-bootstrap-sweetalert";
@@ -9,6 +9,7 @@ import dbDisconnect from "../../util/mongodbDisconnect";
 import Class from "../../models/Class";
 import Swal from "sweetalert2";
 import Navbar from "../../components/Navbar";
+import Cookies from "js-cookie";
 
 let wrongAnswers = [];
 
@@ -119,9 +120,10 @@ const checkContent = (
   // Se a resposta for certa entrar no if
   if (validAnswer) {
     sweetAlertModal.show = true;
+    Cookies.set("classes", classLink, { sameSite: "Lax" });
     if (classLink) {
       router.push(`${classLink}`);
-    } //else
+    }
   }
 
   if (wrongAnswers.length > 0) {
@@ -163,7 +165,13 @@ const Classes = ({ unit }) => {
         <button
           className={styles.buttonSubmit}
           onClick={(e) =>
-            checkContent(code, unit.successCodes, e, sweetAlertModal)
+            checkContent(
+              code,
+              unit.successCodes,
+              e,
+              sweetAlertModal,
+              unit?.classLink
+            )
           }
         >
           Rodar Código{" "}

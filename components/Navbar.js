@@ -87,7 +87,6 @@ const DropdownComponent = (props) => {
 };
 
 const NavbarComponent = (props) => {
-  console.log(props[0]?.simple);
   const [open, setOpen] = useState(false);
 
   //props.openDropdown = open;
