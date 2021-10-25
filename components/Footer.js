@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { FaLinkedin, FaGithub, FaYoutube } from "react-icons/fa";
 import Image from "next/image";
 import ProfilePicture from "../public/ProfilePicture.jpg";
-import Background from "../public/Background.jpg";
+import Background from "../public/Background.png";
 import styles from "../styles/Footer.module.css";
 
 const NavbarComponent = () => {

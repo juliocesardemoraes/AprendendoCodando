@@ -6,7 +6,7 @@
     align-content: center;
     align-items: center;
     justify-content: center;
-    background: -webkit-linear-gradient(rgba(29, 38, 113, 0.3), rgba(195, 55, 100, 0.3)), url("../public/Background.jpg");
+    background: -webkit-linear-gradient(rgba(29, 38, 113, 0.3), rgba(195, 55, 100, 0.3)), url("../public/Background.png");
     background-repeat: no-repeat;
     background-size: cover;
     filter: brightness(1.25);
