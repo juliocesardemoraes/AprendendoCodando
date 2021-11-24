@@ -32,7 +32,7 @@ const DropdownComponent = (props) => {
     <div>
       {props?.props?.openDropdown === true &&
         (onCategories === false ? (
-          <div className={styles.dropdown}>
+          <div className={props?.props?.main ? styles.dropdownMain : styles.dropdown}>
             <ul className={styles.dropdownList}>
               <a
                 href="#"
@@ -44,7 +44,7 @@ const DropdownComponent = (props) => {
             </ul>
           </div>
         ) : (
-          <div className={styles.dropdown}>
+          <div className={props?.props?.main ? styles.dropdownMain : styles.dropdown}>
             <ul className={styles.dropdownList}>
               <a
                 href="#"
@@ -88,8 +88,6 @@ const DropdownComponent = (props) => {
 
 const NavbarComponent = (props) => {
   const [open, setOpen] = useState(false);
-
-  //props.openDropdown = open;
 
   let newProps = { ...props, openDropdown: open };
 

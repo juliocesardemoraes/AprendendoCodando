@@ -26,6 +26,7 @@ const HomeComponent = (categorias) => {
   let props = [];
   props.route = "home";
   props.categories = categorias;
+  props.main = true;
 
   return (
     <div>
