@@ -10,6 +10,8 @@ import Class from "../../models/Class";
 import Swal from "sweetalert2";
 import Navbar from "../../components/Navbar";
 import Cookies from "js-cookie";
+import Category from "../../models/Category";
+
 
 let wrongAnswers = [];
 
@@ -43,6 +45,8 @@ export const getStaticProps = async (context) => {
   dbConnect();
 
   let data = null;
+  let allCategories = null;
+
   try {
     data = await Class.findById(context?.params?.id);
   } catch (err) {
@@ -53,12 +57,22 @@ export const getStaticProps = async (context) => {
       notFound: true,
     };
   }
+
+  try {
+    allCategories = await Category.find();
+    allCategories = JSON.parse(JSON.stringify(allCategories));
+  } catch (err) {
+    console.log("ERROR on fetching all categories!!--> ", err);
+  }
   dbDisconnect();
 
   data = JSON.parse(JSON.stringify(data));
 
   return {
-    props: { unit: data },
+    props: { 
+      unit: data,
+      allCat: allCategories, 
+    },
   };
 };
 
@@ -134,15 +148,19 @@ const checkContent = (
   }
 };
 
-const Classes = ({ unit }) => {
+const Classes = ({ unit, allCat }) => {
   const router = useRouter();
-  const simple = [{ simple: true }];
+  //const simple = [{ simple: true }];
+
+  let props = [];
+  props.route = "home";
+  props.categories = allCat;
 
   const [code, setCode] = useState(unit.placeholderCode);
   const [sweetAlertModal, setSweetAlertModal] = useState({ show: false });
   return (
     <div className={styles.masterContainer}>
-      <Navbar {...simple}></Navbar>
+      <Navbar {...props}></Navbar>
       <h1 className={styles.centerText}>{unit.title}</h1>
       <div
         className={styles.descriptionCode}

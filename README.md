@@ -138,11 +138,17 @@ Este projeto é um projeto que visa o desenvolvimento de uma plataforma de apren
 - [X] Otimização de código. Comentários no código. Removendo imports desnecessários.
     - [X] Rota Principal.
     - [X] Rota de categorias.
-- [ ] LocalStorage.
-- [ ] Arrumar as cores na home. Glassmorphism no menu? gradient
-- [ ] Categories  na navbar das aulas?
+## Hiatus 26/10 - 19/11
+
+## SPRINT 14(22/11-26/11)
+- [X] LocalStorage.
+- [X] Arrumar as cores na home. Glassmorphism no menu? gradient
+- [X] Consertando erro de posição das categorias.
+- [X] Categories na navbar das aulas
 - [ ] Fora de foco remove menu dropdown.
-- [ ] Mostrar checklist nas aulas e marcar com useEffect.
+- [ ] Mostrar checklist. Lista de afazeres dentro das aulas e marcar com useEffect.
+- [ ] Se for a última aula mostrar um parabéns você cumpriu todas as aulas.
+- [ ] Disabilitar aulas já feitas.
 
 ## SPRINT 14(25/10-29/10)
 - [] 
