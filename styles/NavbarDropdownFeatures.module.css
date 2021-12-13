@@ -66,6 +66,21 @@
     position: absolute;
     min-width: 200px !important;
     min-height: 300px;
+    top: 80px;
+    transform: translateX(-72%);
+    background: white;
+    border-radius: 1em;
+    color: var(--color-green-dark);
+    list-style: none;
+    z-index: 1;
+    padding: 0 !important;
+    overflow: auto;
+}
+
+.dropdownMain{
+    position: absolute;
+    min-width: var(--nav-size) !important;
+    min-height: 300px;
     top: 170px;
     transform: translateX(-72%);
     background: white;
