@@ -157,8 +157,7 @@ Este projeto é um projeto que visa o desenvolvimento de uma plataforma de apren
 ### FOOTER PBI
 
 # WORK ITEMS NÃO DISTRIBUIDOS
-- [ ] Adicionar checagem de codigo, autocomplete.
-- [ ] Criar um Card mostrando a descrição da aula.
+- [ ] Adicionar checagem de codigo, autocomplete. Possível?
 - [ ] Add package to see features size
 - [ ] READ MORE CARDS. https://www.youtube.com/watch?v=2wQxF7gTcFo&t=76s
 - [ ] Estilizar.
