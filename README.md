@@ -39,7 +39,7 @@ Este projeto é um projeto que visa o desenvolvimento de uma plataforma de apren
 ### V 0
 - [x] Criando a Tela inicial. 
 
-<strike>[ ] React Project. MockUp. Descartado por enquanto</strike>
+<strike>[ ] React Project. Fazer a estilização inicial. Descartado por enquanto</strike>
 
 ### V 0.1 
 - [X] Estrutura parcial de um modelo de banco de dados.
@@ -47,8 +47,7 @@ Este projeto é um projeto que visa o desenvolvimento de uma plataforma de apren
 - [X] .ENV configurado
 
 ### V 0.2
-<strike>Usar useeffect para renderizar código digitado pelo usuário. Jogado para a 0.3</strike>
-
+<strike>Usar useeffect para renderizar código digitado pelo usuário. Transferido para a versão 0.3</strike>
 - [X] Configurar API para servir o frontend.
 
 ## SPRINT 2(12/07-16/07)
@@ -58,29 +57,29 @@ Este projeto é um projeto que visa o desenvolvimento de uma plataforma de apren
 - [X] Estilizando a home.
 - [X] Usar useeffect para renderizar código digitado pelo usuário. Não foi feito por useeffect, e sim pelo hook on change.
 - [X] Checar código das tarefas.
-- [X] FAZER CHECAGEM PELO REGEX. REGEX CHECK.
+- [X] Executar a checagem do código digitado pelo aluno através do REGEX
 - [X] Separar tarefas por categoria.
 - [X] Mockup na rota classes. E estilização da rota classes.
-- [X] Estilizar a Rota classes[id]. 750 px(2 Panel Mockup)
+- [X] Estilizar a Rota classes[id]. 750 px(Padrão de tamanho)
 - [X] Estilizar e testar a plataforma de código nas rotas id.
-- [X] Responsividade na home. Tarefas em row > 750px
-- [X] Arrumar nomes de código em inglês. 
+- [X] Responsividade na home. Tarefas em linha caso a tela seja maior do que > 750px
+- [X] Refatorar nomes de código em inglês. Trocando os nomes para portugues
 - [X] Linkar tarefas. IDEIA: MONGO POR ID.
-- [X] Strict and loose check. Não foi necessário esta padronização
-- [X] Media query on home. 450px < query
+- [X] Checagem estrita ou branda. Não foi necessário esta padronização, a checagem estrita o usuário deve digitar exatamente o que se pede, já a branda não é necessário esta precisão.
+- [X] Responsividade na HOME.
 
 ## SPRINT 3(19/07-23/07)
 ### V 0.4
 - [X] Adicionando dropdown na home. 
 - [X] Adicionando Router ao Next.Js
-- [X] Dropdown on categories. Talvez do próprio React
+- [X] Dropdown nas categorias. 
 - [X] Sweet Alert quando acertar a questão.
 
 ## SPRINT 4(23/08-27/08)
 ### V 0.5
-- [X] Sweet Alert on getting the right answer.
+- [X] Sweet Alert quando acertar.
 - [X] Hotkey ctrl + enter para a div das classes, enviar.
-- [X] Trocar todas as Rotas "Hardcoded".
+- [X] Trocar todas as Rotas, para rotas dinamicas.
 - [X] Editar o css do container principal da Task.
 - [X] Arrumar getStaticProps de categories e classes. Para fazer as requisições no mesmo arquivo
 - [X] Checar os valores das props em cada lugar onde os mesmos são "chamados".
@@ -93,7 +92,7 @@ Este projeto é um projeto que visa o desenvolvimento de uma plataforma de apren
 ## SPRINT 6(06/09-10/09)
 ### V 1.0
 ### Esta sprint foi responsável pelo deploy real da aplicação, logo foi considerada o ponto inicial do app. O 1.0
-- [X] Pre tag with code imbued into it.
+- [X] Mostrar códigos para os alunos na introdução da aula.
 - [X] Deploy na aplicação pelo vercel. https://aprendendo-codando.vercel.app/
 
 ## SPRINT 7(06/09-10/09)
@@ -114,12 +113,10 @@ Este projeto é um projeto que visa o desenvolvimento de uma plataforma de apren
 - [X] Renderização condicional da Navbar.
 - [X] Consertando problemas de animação.
 - [X] Adicionar ícones.(HOME, INFO, CATEGORIES->AULAS).
-- [X] Animação fluida. 
+- [X] Animação fluida das categorias. 
 <strike>[X] Adicionar rotas para as aulas, baseadas nas categorias.</strike>
 
-
 ## SPRINT 11(04/10-08/10)
-
 - [X] Arrumar navbar home.
 - [X] Arrumar navbar quando estiver nas categorias.
 
@@ -130,11 +127,11 @@ Este projeto é um projeto que visa o desenvolvimento de uma plataforma de apren
     - [X] Rota de classes.
 
 ## SPRINT 13(18/10-22/10)
-- [X] Footer
+- [X] Criando Footer
 - [X] Responsividade no footer.
-- [X] Placeholder code as normal code when rendering page.
-- [X] Informação da navbar descer para o footer.
-- [X] Footer all pages. Semi
+- [X] Código normal ao renderizar página.
+- [X] Botão info da navbar desce para o footer.
+- [X] Footer em quase todas as páginas.
 - [X] Otimização de código. Comentários no código. Removendo imports desnecessários.
     - [X] Rota Principal.
     - [X] Rota de categorias.
@@ -148,7 +145,7 @@ Este projeto é um projeto que visa o desenvolvimento de uma plataforma de apren
 - [ ] Fora de foco remove menu dropdown.
 - [ ] Mostrar checklist. Lista de afazeres dentro das aulas e marcar com useEffect.
 - [ ] Se for a última aula mostrar um parabéns você cumpriu todas as aulas.
-- [ ] Disabilitar aulas já feitas.
+- [ ] Desabilitar aulas já feitas.
 
 ## SPRINT 14(25/10-29/10)
 - [] 
@@ -156,7 +153,7 @@ Este projeto é um projeto que visa o desenvolvimento de uma plataforma de apren
 
 ### FOOTER PBI
 
-# WORK ITEMS NÃO DISTRIBUIDOS
+# WORK ITEMS POSSÍVEIS MAS NÃO DISTRIBUIDOS
 - [ ] Adicionar checagem de codigo, autocomplete. Possível?
 - [ ] Add package to see features size
 - [ ] READ MORE CARDS. https://www.youtube.com/watch?v=2wQxF7gTcFo&t=76s
