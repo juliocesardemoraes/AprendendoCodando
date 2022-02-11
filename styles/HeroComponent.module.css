@@ -1,0 +1,351 @@
+.heroContainer{
+    min-height: 70vh;
+    padding: 0 0 3em 0;
+    background: #1C1D28 !important;
+}
+.aboutContainer{
+    min-height: 70vh;
+    padding: 0 0 3em 0;
+    background: #3A3C52 ;
+}
+
+.responsiveList{
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr ;
+    gap: 1em;
+    list-style-type: none;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 100%;
+}
+
+.responsiveLogoContainer{
+    max-width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1em;
+}
+
+.responsiveLinks{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+}
+
+.nav{
+    height: 15vh;
+}
+
+.startNow{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 2em 4em 0em 4em;
+}
+.textStartNowSkills{
+    color: #11AAA6;
+}
+
+.textStartButton{
+    font-family: 'Poppins', sans-serif !important;
+    width: 100%;
+    min-height: 62px;
+    background: #9788DF;
+    color: white;
+    padding: 0;
+    border: none;
+    opacity: 90%;
+    transition: opacity 0.4s, transform 1s;
+    cursor: pointer;
+}
+
+.textStartButton:hover{
+    opacity: 100% !important;
+    transform: scale(1.2)
+}
+
+.textStartNowH1{
+    font-size: 48px !important;
+    color: white;
+    margin: 0 !important;
+}
+
+.textStartNowH3{
+    color: white;
+    font-weight: 300 !important;
+}
+
+
+.textContainer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3em;
+}
+
+.elearningConcept{
+    margin-top: 5em;
+    display: grid;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 50px;
+}
+
+.elearningChild{
+    padding: 2em;
+}
+
+.elearningChildButtons{
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+.elearningButton{
+    min-width: 100px;
+    height: 100px;
+    background: #1C1D28;
+    padding: 0;
+    border: none;
+    margin: 1em;
+    transition: box-shadow 0.8s;
+    transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+}
+
+
+.learnCardContainer{
+    margin-top: 5em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr !important;
+    gap: 50px;
+}
+.learnCard{
+    min-height: 500px;
+    background: #353747;
+    text-align: center;
+    padding: 1em;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.coursesContainer{
+    display: flex;
+    align-items: center;
+    margin-top: 3em;
+    flex-direction: column;
+}
+
+.coursesContent{
+    width: 50%;
+    height: 5em;
+    justify-content: space-between;
+    display: flex;
+    background: rgba(98, 77, 192,0.8);
+    border-radius: 1em 1em 0 0;
+}
+
+
+
+.coursesItem{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 1em;
+    background: #1C1D28;
+    min-height: 200px;
+    max-height: 300px;
+    overflow: auto;
+}
+.coursesSubItem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: #383a4a;
+    padding: 1em;
+    border-radius: 1em;
+    margin-bottom: 1em;
+    opacity: 70%;
+    transition: opacity 0.8s;
+    cursor: pointer;
+}
+
+.coursesSubItem:hover{
+    opacity: 100%;
+}
+
+.elearningButtonLogo{
+    width:50px; 
+    height: 50px;
+    color: #6B51DC;
+}
+
+.elearningButton:hover{
+    box-shadow: inset 0 0 10px #9887ED, 0 0 20px #9887ED, 0 0 30px #9887ED;
+}
+
+.aboutMeCardContainer{
+    display: flex;
+    justify-content: center;
+}
+
+.aboutMeCard{
+    min-height: 500px;
+    background: #353747;
+    text-align: center;
+    padding: 1em;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.5) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.7) 0px 18px 36px -14px inset;
+    min-width: 300px;
+    padding:3em
+
+}
+.iconHubContainer{
+    width: 100%;
+    justify-content: flex-end;
+    display: flex;
+}
+.iconHub{
+    width: 32px;
+    height: 32px;
+    margin-left: 0.5em;
+}
+.github{
+    color: #FFF;
+    transition: filter 0.8s;
+}
+
+.linkedin{
+    color: #AF9DFD;
+    transition: filter 0.8s;
+}
+
+.github:hover{
+    cursor: pointer;
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+}
+
+.linkedin:hover{
+    cursor: pointer;
+    filter: drop-shadow(3px 5px 2px rgba(143, 93, 249, 0.3));
+}
+
+.aboutMeFonts {
+    font-family: 'Ubuntu', sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.aboutMeFonts h1{
+    font-size: 20px;
+}
+.aboutMeFonts h2{
+    font-size: 14px;
+    font-style: italic;
+    color: "#AF9DFD !important"
+}
+.aboutMeFonts h3{
+    font-size: 12px;
+    font-weight: lighter;
+}
+
+.skillsContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.skillsSubContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.skillsButtons{
+    border-radius: 0.5em;
+    padding: 0.5em;
+    margin: 0 1em 1em 0;
+    font-weight: lighter;
+    font-size: 14px;
+    width: 100px;
+    transition: box-shadow 0.8s;
+    transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+}
+.skillsButtons:nth-child(odd):hover{
+    box-shadow: rgba(143, 93, 249, 0.3) 0px 15px 20px -4px inset, rgba(143, 93, 249, 0.2) 0px 9px 18px -2px inset;
+}
+.skillsButtons:nth-child(even):hover{
+    box-shadow: rgba(76, 179, 84, 0.3) 0px 15px 20px -4px inset, rgba(76, 179, 84, 0.2) 0px 9px 18px -2px inset;
+}
+
+@media screen and (max-width: 950px) {
+    .imageStartNow{
+        display: none !important;
+    }
+    .startNow{
+        padding: 0 !important;
+    }
+    .heroContainer{
+        min-height: 70vh;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .textStartNowH1{
+        font-size: 32px !important;
+        color: white;
+    }
+    .responsiveList{
+        grid-template-columns: 1fr 1fr 1fr 1fr !important;
+        padding: 0.5em !important;
+    }
+    .responsiveLinks{
+        font-size: 16px !important;
+    }
+    .elearningConcept{
+        grid-template-columns: 1fr !important;
+        display: grid;
+        gap: 50px;
+    }
+    .elearningChildButtons{
+        padding: 2em;
+        flex-direction: row !important;
+    }
+    .elearningChild{
+        text-align: center;
+    }
+    .coursesHead{
+        font-size: 12px !important;
+    }
+    .coursesContent{
+        height: 3em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .learnCardContainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .learnCard{
+        width: 300px;
+    }
+    .aboutMeCard{
+        min-width: 300px;
+    
+    }
+    .disappear{
+        display: none !important;
+    }
+}
+

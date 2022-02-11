@@ -9,7 +9,6 @@ import Category from "../../models/Category";
 import dbConnect from "../../util/mongodb";
 import dbDisconnect from "../../util/mongodbDisconnect";
 import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
 import Cookies from "js-cookie";
 
 // Populando os caminhos para o nextjs. https://nextjs.org/docs/basic-features/data-fetching
@@ -118,7 +117,6 @@ const Classes = ({ classes, category, allCat }) => {
           </Link>
         ))}
       </div>
-      <Footer></Footer>
     </div>
   );
 };

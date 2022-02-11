@@ -1,21 +1,20 @@
 import mongoose from "mongoose";
 import { MONGO_URI } from "../config/enviromentVariables";
 
-const connection = {};
+let connection = {};
 
 async function dbConnect() {
   if (connection.isConnected) {
     return;
   }
 
-  const db = mongoose
+  connection = mongoose
     .connect(MONGO_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     })
     .then((res) => {
-      console.log("Connected----->");
     })
-    .catch((err) => console.log("ERROR!---> ", err));
+    .catch((err) => console.log("ERROR CONNECTING TO DB!---> ", err));
 }
 export default dbConnect;

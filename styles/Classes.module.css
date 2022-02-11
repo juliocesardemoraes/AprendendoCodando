@@ -20,7 +20,7 @@
 }
 
 .masterContainer{
-    font-family: 'Poppins', sans-serif !important;
+    font-family: 'Poppins', sans-serif ;
     background: var(--background-color);
     color:wheat;
     min-height: 100vh;

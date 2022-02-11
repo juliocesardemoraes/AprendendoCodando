@@ -142,21 +142,40 @@ Este projeto é um projeto que visa o desenvolvimento de uma plataforma de apren
 - [X] Arrumar as cores na home. Glassmorphism no menu? gradient
 - [X] Consertando erro de posição das categorias.
 - [X] Categories na navbar das aulas
-- [ ] Fora de foco remove menu dropdown.
-- [ ] Mostrar checklist. Lista de afazeres dentro das aulas e marcar com useEffect.
-- [ ] Se for a última aula mostrar um parabéns você cumpriu todas as aulas.
-- [ ] Desabilitar aulas já feitas.
 
-## SPRINT 14(25/10-29/10)
-- [] 
+## Hiatus 26/11 - 01/02/2022
+
+## SPRINT 15(01/02-14/10)
+- [X] NOVO FRONT
+    - [X] Hero
+        - [X] Links
+    - [X] About
+        - [X] Estilizar botões. Neon?
+        - [] Rodar botão ao apertar? ou apenas aparecer descrição?
+        - [X] Links
+    - [X] Learn
+        - [X] Links
+        - [X] Alinhado 
+    - [X] Courses 
+        - [X] Fazer Query nas classes relativas as respectivas categorias
+        - [X] Ícones dinâmicos de acordo com o nome??
+        - [X] Links
+    - [X] Sobre Mim
+        - [X] Links
+    - [X] Responsividade. Learn, courses, sobre mim 
+- [X] Remove console.log
+- [] PWA
 <hr></hr>
 
 ### FOOTER PBI
 
 # WORK ITEMS POSSÍVEIS MAS NÃO DISTRIBUIDOS
+- [ ] Fora de foco remove menu dropdown.
+- [ ] Mostrar checklist. Lista de afazeres dentro das aulas e marcar com useEffect.
+- [ ] Se for a última aula mostrar um parabéns você cumpriu todas as aulas.
+- [ ] Desabilitar aulas já feitas.
 - [ ] Adicionar checagem de codigo, autocomplete. Possível?
 - [ ] Add package to see features size
 - [ ] READ MORE CARDS. https://www.youtube.com/watch?v=2wQxF7gTcFo&t=76s
 - [ ] Estilizar.
-- [ ] PWA?
 - [ ] Testes com cypress + nextjs

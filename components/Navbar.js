@@ -1,6 +1,6 @@
 import Link from "next/link";
 import router, { useRouter } from "next/router";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import styles from "../styles/NavbarDropdownFeatures.module.css";
 import {
   FaHome,
