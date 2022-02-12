@@ -100,9 +100,8 @@ const checkLogo = (name) => {
   
 }
 
-const renderCourseItem = (category,classes,idx) => {
+const renderCourseItem = (category,classes,idx, router) => {
 
-  const router = useRouter();
 
   const filteredClassesByCategory = classes.filter((element)=>{
     return element?.category === category?._id;
@@ -118,7 +117,7 @@ const renderCourseItem = (category,classes,idx) => {
   )
 }
 
-const renderCourses = (categorias, classes) => {
+const renderCourses = (categorias, classes, router) => {
   return(
       <div id="courses" className={styles.aboutContainer}>
         <div className={styles.textContainer}>
@@ -134,7 +133,7 @@ const renderCourses = (categorias, classes) => {
           <div className={styles.coursesItem}>
             
             {categorias.map((item, idx)=>(
-              renderCourseItem(item,classes,idx)
+              renderCourseItem(item,classes,idx, router)
             ))}
             
           </div>
@@ -185,10 +184,10 @@ const renderAboutMe = () => {
         <div className={styles.aboutMeCardContainer}>
           <div className={styles.aboutMeCard}>
               <div className={styles.iconHubContainer}>
-                <a href='https://www.linkedin.com/in/j%C3%BAlio-c%C3%A9sar-de-moraes-92176b178/' target="_blank">                
+                <a href='https://www.linkedin.com/in/j%C3%BAlio-c%C3%A9sar-de-moraes-92176b178/' target="_blank" rel="noreferrer">                
                   <FaLinkedin className={`${styles.iconHub} ${styles.linkedin}`}></FaLinkedin>
                 </a>
-                <a href='https://github.com/juliocesardemoraes/' target="_blank">
+                <a href='https://github.com/juliocesardemoraes/' target="_blank" rel="noreferrer">
                   <FaGithubSquare className={`${styles.iconHub} ${styles.github}`}></FaGithubSquare>
                 </a>
               </div>  
@@ -209,12 +208,12 @@ const renderAboutMe = () => {
                 <h1 style={{color:'#fff'}}>Habilidades</h1>
                 <div style={{color: '#fff'}}className={styles.skillsContainer}>
                   <div className={styles.skillsSubContainer}>
-                    <div style={{background: "rgba(196, 196, 196, 0.1) !important"}} className={styles.skillsButtons}><span>UX DESIGNER</span></div>
-                    <div style={{background: "rgba(196, 196, 196, 0.1) !important"}} className={styles.skillsButtons}><span>FRONTEND DEV</span></div>
+                    <div className={styles.skillsButtons}><span>UX DESIGNER</span></div>
+                    <div className={styles.skillsButtons}><span>FRONTEND DEV</span></div>
                   </div>
                   <div className={styles.skillsSubContainer}>
-                    <div style={{background: "rgba(196, 196, 196, 0.1) !important"}} className={styles.skillsButtons}><span>CSS</span></div>
-                    <div style={{background: "rgba(196, 196, 196, 0.1) !important"}} className={styles.skillsButtons}><span>NODE.JS</span></div>
+                    <div className={styles.skillsButtons}><span>CSS</span></div>
+                    <div className={styles.skillsButtons}><span>NODE.JS</span></div>
                   </div>
                 </div>
                 
@@ -226,12 +225,13 @@ const renderAboutMe = () => {
 }
 
 const HeroComponent = (props) => {
+  const router = useRouter();
   return (
     <>
       {renderHero()}
       {renderAboutThisCourse()}
       {renderOurKnowledge()}
-      {renderCourses(props?.categorias, props?.classes)}
+      {renderCourses(props?.categorias, props?.classes, router)}
       {renderAboutMe()}
     </>
   );
