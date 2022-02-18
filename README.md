@@ -166,6 +166,10 @@ Este projeto é um projeto que visa o desenvolvimento de uma plataforma de apren
     - [X] Responsividade. Learn, courses, sobre mim 
 - [X] Remove console.log
 - [] PWA
+
+## SPRINT 16(01/02-14/10)
+- [X] Arrumando responsividade.
+
 <hr></hr>
 
 ### FOOTER PBI
