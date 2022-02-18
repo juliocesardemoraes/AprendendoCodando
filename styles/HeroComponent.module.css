@@ -45,6 +45,7 @@
     align-items: center;
     justify-content: center;
     margin: 2em 4em 0em 4em;
+    padding: 0 12.5% 0;
 }
 .textStartNowSkills{
     color: #11AAA6;
@@ -94,6 +95,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr !important;
     gap: 50px;
+    padding: 0 15% 0;
 }
 
 .elearningChild{
@@ -104,6 +106,7 @@
     padding: 2em;
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
 }
 
 .elearningButton{
@@ -289,16 +292,60 @@
 .imageStartNow{
     margin: 0 0 2em 6em;
 }
+.course{
+    margin-left: '5em !important';
+    width: '100px';
+    text-align: 'center'; 
+}
 
-@media screen and (max-width: 950px) {
+@media screen and (min-width: 1600px) {
+    .elearningConcept{
+        padding: 0 20% 0 !important;
+    }
+    .startNow{
+        padding: 0 18.4% 0 !important;
+    }
+}
+
+@media screen and (max-width: 1200px) {
     .imageStartNow{
         display: none !important;
     }
+}
+
+
+
+@media screen and (max-width: 1000px) {
+
     .startNow{
         padding: 0 !important;
     }
     .heroContainer{
         min-height: 70vh;
+    }
+    .elearningChildButtons{
+        padding: 2em;
+        flex-direction: row !important;
+        justify-content: center;
+        display: flex;
+    }
+    .elearningConcept{
+        grid-template-columns: 1fr !important;
+        display: grid;
+        gap: 50px;
+    }
+    .elearningChild{
+        text-align: center;
+    }
+    .disappear{
+        display: none !important;
+    }
+    .course{
+        margin-left: 0 !important;
+    }
+    .coursesContent{
+        display: flex;
+        justify-content: center;
     }
 }
 
@@ -314,18 +361,7 @@
     .responsiveLinks{
         font-size: 16px !important;
     }
-    .elearningConcept{
-        grid-template-columns: 1fr !important;
-        display: grid;
-        gap: 50px;
-    }
-    .elearningChildButtons{
-        padding: 2em;
-        flex-direction: row !important;
-    }
-    .elearningChild{
-        text-align: center;
-    }
+
     .coursesHead{
         font-size: 12px !important;
     }
@@ -347,8 +383,6 @@
         min-width: 300px;
     
     }
-    .disappear{
-        display: none !important;
-    }
+    
 }
 
