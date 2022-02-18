@@ -146,6 +146,7 @@ Este projeto é um projeto que visa o desenvolvimento de uma plataforma de apren
 ## Hiatus 26/11 - 01/02/2022
 
 ## SPRINT 15(01/02-14/10)
+### V 2.0
 - [X] NOVO FRONT
     - [X] Hero
         - [X] Links

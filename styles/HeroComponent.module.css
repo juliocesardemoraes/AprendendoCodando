@@ -286,6 +286,9 @@
 .skillsButtons:nth-child(even):hover{
     box-shadow: rgba(76, 179, 84, 0.3) 0px 15px 20px -4px inset, rgba(76, 179, 84, 0.2) 0px 9px 18px -2px inset;
 }
+.imageStartNow{
+    margin: 0 0 2em 6em;
+}
 
 @media screen and (max-width: 950px) {
     .imageStartNow{

@@ -11,7 +11,7 @@ const renderNav = () => {
     <nav className={styles.nav}>
       <ul className={styles.responsiveList}>
         <li className={styles.responsiveLogoContainer}><Image
-          alt="Illustration of an person working on a computer"
+          alt="Website Logo"
           src={Logo}
           className={styles.responsiveLogo}
         ></Image></li>
@@ -45,6 +45,7 @@ return(
             <Image
               alt="Illustration of an person working on a computer"
               src={codeMan}
+              style={{marginLeft:'6em !important', marginBottom: '2.5em'}}
             ></Image>
           </div>
         </div>
