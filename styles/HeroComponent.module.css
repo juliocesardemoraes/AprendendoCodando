@@ -37,6 +37,7 @@
 
 .nav{
     height: 15vh;
+    padding: 0 16% 0 !important;
 }
 
 .startNow{
@@ -305,6 +306,9 @@
     .startNow{
         padding: 0 18.4% 0 !important;
     }
+    .nav{
+        padding: 0 21% 0 !important;
+    }
 }
 
 @media screen and (max-width: 1200px) {
@@ -316,7 +320,6 @@
 
 
 @media screen and (max-width: 1000px) {
-
     .startNow{
         padding: 0 !important;
     }
@@ -381,8 +384,10 @@
     }
     .aboutMeCard{
         min-width: 300px;
-    
     }
+    .coursesItem, .coursesContent{
+        width: 80%;
+    } 
     
 }
 
