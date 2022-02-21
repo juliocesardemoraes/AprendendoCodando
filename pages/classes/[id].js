@@ -12,7 +12,7 @@ import Navbar from "../../components/Navbar";
 import Cookies from "js-cookie";
 import Category from "../../models/Category";
 
-
+// Inicializando o vetor de respostas erradas de forma global.
 let wrongAnswers = [];
 
 // Pegando as rotas necessárias para o componente
@@ -84,14 +84,6 @@ function createMarkup(obj) {
   return { __html: obj };
 }
 
-/*
-const checkEnter = (e, value, checkValue, sweetAlertModal, classLink) => {
-  if (e.ctrlKey) {
-    checkContent(value, checkValue, null, sweetAlertModal, null, classLink);
-  }
-};
-*/
-
 //Nesta função o texto que necessita ser complementado passa por um regex
 //e retorna para o usuário. O regex é necessário pois são caracteres
 //especiais
@@ -116,7 +108,8 @@ const checkContent = (
   checkValue,
   event = null,
   sweetAlertModal,
-  classLink = null
+  classLink = null,
+  last = false
 ) => {
   value = value.toLowerCase();
   let validAnswer = true;
@@ -135,7 +128,13 @@ const checkContent = (
   if (validAnswer) {
     sweetAlertModal.show = true;
     Cookies.set("classes", classLink, { sameSite: "Lax" });
-    if (classLink) {
+    if(last){
+      Swal.fire(
+        `Parabéns por completar este curso!!! Você pode escolher outro caso deseje`
+      );
+      router.push(`/#courses`);
+      event?.preventDefault();
+    }else if(classLink){
       router.push(`${classLink}`);
     }
   }
@@ -150,7 +149,7 @@ const checkContent = (
 
 const Classes = ({ unit, allCat }) => {
   const router = useRouter();
-  //const simple = [{ simple: true }];
+  console.log(unit);
 
   let props = [];
   props.route = "home";
@@ -188,7 +187,8 @@ const Classes = ({ unit, allCat }) => {
               unit.successCodes,
               e,
               sweetAlertModal,
-              unit?.classLink
+              unit?.classLink,
+              unit?.last
             )
           }
         >
