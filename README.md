@@ -167,8 +167,14 @@ Este projeto é um projeto que visa o desenvolvimento de uma plataforma de apren
 - [X] Remove console.log
 - [] PWA
 
+
 ## SPRINT 16(01/02-14/10)
 - [X] Arrumando responsividade.
+
+## SPRINT 17(21/02 - 04/03)
+- [] Adicionando última aula e completar curso.
+- [] Arrumar design do botão das aulas e adicionar "Completar aula"
+- [] 
 
 <hr></hr>
 

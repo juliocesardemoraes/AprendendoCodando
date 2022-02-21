@@ -79,9 +79,7 @@ export const getStaticProps = async (context) => {
 const Classes = ({ classes, category, allCat }) => {
   const [cookie, setCookie] = useState(Cookies.get("classes"));
   // Criando a array que irá popular a navbar
-  useEffect(() => {
-    setCookie(Cookies.get("classes"));
-  }, []);
+
   let props = [];
   props.route = "home";
   props.categories = allCat;

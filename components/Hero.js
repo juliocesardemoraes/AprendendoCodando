@@ -36,7 +36,7 @@ const renderHero = () => {
       <div className={styles.startNow}>
         <div className={styles.textStartNow}>
           <h1 className={styles.textStartNowH1}>Aprenda a <span className={styles.textStartNowSkills}>programar</span> sites profissionais</h1>
-          <h3 className={styles.textStartNowH3}>Ensino gratuito e de qualidade.</h3>
+          <h3 style={{marginBottom: '3em'}} className={styles.textStartNowH3}>Ensino gratuito e de qualidade.</h3>
           <a href="#courses">
             <button className={styles.textStartButton} href="#courses">Começe agora</button>
           </a>
