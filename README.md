@@ -176,6 +176,7 @@ Este projeto é um projeto que visa o desenvolvimento de uma plataforma de apren
 - [X] Novo Design para a seção de categorias.
 
 ## SPRINT 18(07/03 - 21/03)
+- [] Adicionar criação de usuário. Mongo DB e autenticação utilizando NEXT.JS
 - [] Arrumar design do botão das aulas e adicionar "Completar aula"
 - [] Bug. Vá para sua aula atual pode ir para outra categoria.
 - [] Bug. Pode acabar a última aula e consequentemente acabar o curso.
