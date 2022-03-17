@@ -56,11 +56,12 @@
     font-family: 'Poppins', sans-serif !important;
     width: 100%;
     min-height: 62px;
-    background: #9788DF;
+    background: #584a9d;
     color: white;
+    font-weight: 500;
     padding: 0;
     border: none;
-    opacity: 90%;
+    opacity: 95%;
     transition: opacity 0.4s, transform 1s;
     cursor: pointer;
 }
